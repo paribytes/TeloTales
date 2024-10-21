@@ -410,13 +410,16 @@ ggplot() +
   scale_fill_manual(values = color_mapping) +
   guides(fill = guide_legend(title = "Populations", override.aes = list(fill = population_colors))) +
   theme(
-    axis.text.x = element_text(size = 4.5),  # Adjust the font size for x-axis labels
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 8),  # Adjust the font size for x-axis labels, tilted the labels to 45 degrees 
     axis.text.y = element_text(size = 13),  # Adjust the font size for y-axis labels
     legend.text = element_text(size = 5),
     legend.position = c(0.95, 0.95),  # Adjust the legend position (x, y)
     legend.justification = c(1, 1)  # Adjust the legend justification (1, 1 for upper-right corner)
   )
 ```
+
+
+
 
 #Statistical Analysis begins from here
 
