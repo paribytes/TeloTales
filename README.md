@@ -1,7 +1,20 @@
-# TeloTales
-"This repository contains code/ scripts for my chapter-1 - Estimating telomeric content across global human populations using Phase 3 of the 1000 Genomes Project data."
+# TeloTales: Telomere Content Analysis Pipeline
 
-This series of scripts/python code will download BAM files from the 1kgp, run qmotif on them (sequentially), estimate telomeric content, and save them. 
+This repository contains scripts and instructions for downloading BAM files from Phase 3 of the 1000 Genomes Project, analyzing telomeric content using qmotif, and saving output files with telomeric data. Each step in the pipeline is outlined below, along with requirements and execution instructions.
+
+## Table of Contents
+
+- [Requirements](Requirements)
+
+- [File Descritions](FileDescriptions)
+  
+- [Usage](Usage)
+
+- [Detailed Steps](DetailedSteps)
+
+
+
+
 
 Sequence to run the files:
 1.) download_files.sh (requires: files_list.txt)
