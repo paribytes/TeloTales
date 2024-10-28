@@ -1,7 +1,7 @@
 # TeloTales
-"This repo is for my chapter-1 - Estimation of telomeric content across global human populations using Phase 3 of  the 1000 Genomes Project data."
+"This repository contains code/ scripts for my chapter-1 - Estimating telomeric content across global human populations using Phase 3 of the 1000 Genomes Project data."
 
-These series of scripts/python code will download BAM files from the 1kgp, run qmotif on them (sequentially), estimate telomere motif counts and save them. 
+This series of scripts/python code will download BAM files from the 1kgp, run qmotif on them (sequentially), estimate telomeric content, and save them. 
 
 Sequence to run the files:
 1.) download_files.sh (requires: files_list.txt)
@@ -16,5 +16,4 @@ Sequence to run the files:
 4.	coverage.sh is to get a tally of telomere motifs for each chromosome. This script uses “chrnames” file, make sure they’re in the same folder. This script creates only one output file “stage2coverage” which has all the info on all the files you ran. 
 5.	totaltelomere.py gives total telomere motif counts for the sequence across all chromosomes. This uses the “stage2coverage” file we got as an output in the previous step and generates a file named “total_telomere_motif_counts”
 
-![image](https://github.com/user-attachments/assets/d44577bf-0707-4543-96b8-ef44ecc300b9)
 
