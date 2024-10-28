@@ -39,8 +39,17 @@ To use the pipeline, run the scripts in the following order:
 
 
 ## Detailed Steps
+1. **Download BAM and BAI files**
+* Run `download_files.sh` to download the BAM and BAI files from NCBI’s 1000 Genomes Project server. Make sure to:
+* Include URLs for BAM and BAI files in `files_list.txt` and that both `download_files.sh` and `files_list.txt` are in the same folder.
 
+```
+chmod +x download_files.sh
+```
 
+```
+./download_files.sh
+```
 
 
 
