@@ -3,14 +3,18 @@
 This repository contains scripts and instructions for downloading BAM files from Phase 3 of the 1000 Genomes Project, analyzing telomeric content using qmotif, and saving output files with telomeric data. Each step in the pipeline is outlined below, along with requirements and execution instructions.
 
 ## Table of Contents
+* Requirements
+* File Descriptions
+* Usage
+* Detailed Steps
 
-- [Requirements](Requirements)
+## Requirements
 
-- [File Descritions](FileDescriptions)
+## File Descriptions
   
-- [Usage](Usage)
+## Usage
 
-- [Detailed Steps](DetailedSteps)
+## Detailed Steps
 
 
 
