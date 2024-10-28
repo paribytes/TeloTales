@@ -71,7 +71,8 @@ python3 stage2.py
 ```
 
 4. **Generate Chromosome-Level Tally of Telomeric reads**
-* Run `realcoverage.sh` to tally telomeric reads for each chromosome. This script uses the `chrnames` file, so make sure it’s in the same folder. Note: The `chrnames` file only has chromosome numbers for autosomes, sex chromosomes are not included.
+* Run `realcoverage.sh` to tally telomeric reads for each chromosome. This script uses the `chrnames` file, so make sure it’s in the same folder. 
+* **Note** : The `chrnames` file only has chromosome numbers for autosomes, sex chromosomes are not included.
 
 ```
 bash realcoverage.sh
