@@ -9,6 +9,9 @@ This repository contains scripts and instructions for downloading BAM files from
 * Detailed Steps
 
 ## Requirements
+To run this pipeline, you'll need:
+* **qmotif**: Download and install qmotif ([Documentation here](https://adamajava.readthedocs.io/en/latest/qmotif/qmotif_1_0/))
+* **Java**: Required to run qmotif
 
 ## File Descriptions
   
