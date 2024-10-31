@@ -10,6 +10,7 @@ We utilized [NCBI’s 1000 Genomes Project server](https://www.ncbi.nlm.nih.gov/
 * Usage
 * Detailed Steps
 * Outputs
+* Contact
 
 ## Requirements
 To run this pipeline, you'll need:
