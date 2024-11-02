@@ -1,10 +1,10 @@
-# Example output files for 1000 Genomes Project Samples
+# Example output files for 1000 Genomes Project Samples using TeloTales 
 
 This folder contains example files generated using TeloTales workflow from 1000 Genomes Project samples.
 
 ## Files Included
 
-- **HG00143_log.txt**:
+- **HG00143_log.txt**: 
   
 - **HG00143_output.bai**
 
