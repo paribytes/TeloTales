@@ -9,6 +9,6 @@ This folder contains all supplementary data files associated with 1000 Genomes P
   - *Source*: This file was provided directly by the 1000 Genomes Project helpdesk.
   - *Contact*: For additional information regarding the data, contact the 1000 Genomes Project helpdesk at info@1000genomes.org.
  
-- **Informed Consent Form Template**: The consent document for the 1000 Genomes Project
+- **Informed Consent Form Template**: The consent document for the 1000 Genomes Project sample donors
 
   
