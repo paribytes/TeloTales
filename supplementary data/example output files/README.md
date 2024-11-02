@@ -24,7 +24,9 @@ The `qmotif` tool is used for analyzing specific sequence motifs within genomic 
 - Verify the expected format of `qmotif` outputs.
 - Compare your results with example outputs for consistency.
   
-For more details on interpreting `qmotif` output files, refer to the [Qmotif Documentation](link_to_qmotif_documentation).
+For more details on interpreting `qmotif` output files, refer to the [qmotif documentation](https://adamajava.readthedocs.io/en/latest/qmotif/qmotif_1_0/).
+
+
 
 
 
