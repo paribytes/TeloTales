@@ -1,0 +1,5 @@
+    
+    <summary bam="/data/telomere/HG00143 "            <scaledGenomic count="2442"/>"
+    <summary bam="/data/telomere/HG00148 "            <scaledGenomic count="2366"/>"
+    <summary bam="/data/telomere/HG00149 "            <scaledGenomic count="16365"/>"
+    
