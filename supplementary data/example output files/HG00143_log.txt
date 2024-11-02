@@ -1,0 +1,1123 @@
+22:03:19.599 [main] EXEC org.qcmg.motif.Motif - Uuid d3bac0b9_11b5_421a_99c7_83d47cb28016
+22:03:19.600 [main] EXEC org.qcmg.motif.Motif - StartTime 2024-06-20 22:03:19
+22:03:19.600 [main] EXEC org.qcmg.motif.Motif - OsName Linux
+22:03:19.601 [main] EXEC org.qcmg.motif.Motif - OsArch amd64
+22:03:19.601 [main] EXEC org.qcmg.motif.Motif - OsVersion 6.5.0-35-generic
+22:03:19.602 [main] EXEC org.qcmg.motif.Motif - RunBy priyanshi
+22:03:19.602 [main] EXEC org.qcmg.motif.Motif - ToolName qmotif
+22:03:19.603 [main] EXEC org.qcmg.motif.Motif - ToolVersion 1.0 (411) (0.3)
+22:03:19.603 [main] EXEC org.qcmg.motif.Motif - CommandLine qmotif -i qmotif.ini --bam HG00143.mapped.ILLUMINA.bwa.GBR.low_coverage.bam -bai HG00143.mapped.ILLUMINA.bwa.GBR.low_coverage.bam.bai --log HG00143_log.txt -o HG00143_output.txt -o HG00143_output.bam
+22:03:19.603 [main] EXEC org.qcmg.motif.Motif - JavaHome /usr/lib/jvm/java-11-openjdk-amd64
+22:03:19.604 [main] EXEC org.qcmg.motif.Motif - JavaVendor Ubuntu
+22:03:19.604 [main] EXEC org.qcmg.motif.Motif - JavaVersion 11.0.23
+22:03:19.605 [main] EXEC org.qcmg.motif.Motif - host cos-bi-e061614
+22:03:19.692 [main] INFO org.qcmg.motif.JobQueue - Queueing jobs
+22:03:19.917 [main] INFO org.qcmg.motif.JobQueue - Number of queued coverage jobs: 87
+22:03:19.918 [main] INFO org.qcmg.motif.JobQueue - Queued jobs are: [1 coverage, 2 coverage, 3 coverage, 4 coverage, 5 coverage, 6 coverage, 7 coverage, X coverage, 8 coverage, 9 coverage, 10 coverage, 11 coverage, 12 coverage, unmapped coverage, 13 coverage, 14 coverage, 15 coverage, 16 coverage, 17 coverage, 18 coverage, 20 coverage, Y coverage, 19 coverage, 22 coverage, 21 coverage, hs37d5 coverage, GL000192.1 coverage, GL000225.1 coverage, GL000194.1 coverage, GL000193.1 coverage, GL000200.1 coverage, GL000222.1 coverage, GL000212.1 coverage, GL000195.1 coverage, GL000223.1 coverage, GL000224.1 coverage, GL000219.1 coverage, GL000205.1 coverage, GL000215.1 coverage, GL000216.1 coverage, GL000217.1 coverage, NC_007605 coverage, GL000199.1 coverage, GL000211.1 coverage, GL000213.1 coverage, GL000220.1 coverage, GL000218.1 coverage, GL000209.1 coverage, GL000221.1 coverage, GL000214.1 coverage, GL000228.1 coverage, GL000227.1 coverage, GL000191.1 coverage, GL000208.1 coverage, GL000198.1 coverage, GL000204.1 coverage, GL000233.1 coverage, GL000237.1 coverage, GL000230.1 coverage, GL000242.1 coverage, GL000243.1 coverage, GL000241.1 coverage, GL000236.1 coverage, GL000240.1 coverage, GL000206.1 coverage, GL000232.1 coverage, GL000234.1 coverage, GL000202.1 coverage, GL000238.1 coverage, GL000244.1 coverage, GL000248.1 coverage, GL000196.1 coverage, GL000249.1 coverage, GL000246.1 coverage, GL000203.1 coverage, GL000197.1 coverage, GL000245.1 coverage, GL000247.1 coverage, GL000201.1 coverage, GL000235.1 coverage, GL000239.1 coverage, GL000210.1 coverage, GL000231.1 coverage, GL000229.1 coverage, MT coverage, GL000226.1 coverage, GL000207.1 coverage]
+22:03:19.919 [main] INFO org.qcmg.motif.JobQueue - Commencing processing of jobs...
+22:03:19.921 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [1 coverage]
+22:03:19.922 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [1 coverage]
+22:03:19.922 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 1
+22:03:19.933 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 24926 regions for 1 with 0 includes and 0 excludes
+22:03:19.933 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 1
+22:04:27.108 [Thread-0] INFO org.qcmg.motif.CoverageJob - 1:
+read 18395605 records, of which 18395605 satisfied the query
+number in counterIn instance is: 18395605
+number in counterOut instance is: 18395605
+
+22:04:27.109 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 1
+22:04:27.109 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [1 coverage]
+22:04:27.153 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [2 coverage]
+22:04:27.153 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [2 coverage]
+22:04:27.154 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 2
+22:04:27.158 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 24320 regions for 2 with 0 includes and 0 excludes
+22:04:27.158 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 2
+22:05:15.535 [Thread-0] INFO org.qcmg.motif.CoverageJob - 2:
+read 19171095 records, of which 19171095 satisfied the query
+number in counterIn instance is: 37566700
+number in counterOut instance is: 37566700
+
+22:05:15.535 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 2
+22:05:15.536 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [2 coverage]
+22:05:15.568 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [3 coverage]
+22:05:15.568 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [3 coverage]
+22:05:15.568 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 3
+22:05:15.572 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 19803 regions for 3 with 0 includes and 0 excludes
+22:05:15.572 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 3
+22:05:59.208 [Thread-0] INFO org.qcmg.motif.CoverageJob - 3:
+read 15754999 records, of which 15754999 satisfied the query
+number in counterIn instance is: 53321699
+number in counterOut instance is: 53321699
+
+22:05:59.208 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 3
+22:05:59.209 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [3 coverage]
+22:05:59.228 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [4 coverage]
+22:05:59.229 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [4 coverage]
+22:05:59.229 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 4
+22:05:59.231 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 19116 regions for 4 with 0 includes and 0 excludes
+22:05:59.231 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 4
+22:06:37.596 [Thread-0] INFO org.qcmg.motif.CoverageJob - 4:
+read 14988866 records, of which 14988866 satisfied the query
+number in counterIn instance is: 68310565
+number in counterOut instance is: 68310565
+
+22:06:37.615 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 4
+22:06:37.615 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [4 coverage]
+22:06:37.638 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [5 coverage]
+22:06:37.639 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [5 coverage]
+22:06:37.639 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 5
+22:06:37.641 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 18092 regions for 5 with 0 includes and 0 excludes
+22:06:37.641 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 5
+22:07:14.676 [Thread-0] INFO org.qcmg.motif.CoverageJob - 5:
+read 14378994 records, of which 14378994 satisfied the query
+number in counterIn instance is: 82689559
+number in counterOut instance is: 82689559
+
+22:07:14.676 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 5
+22:07:14.677 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [5 coverage]
+22:07:14.696 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [6 coverage]
+22:07:14.696 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [6 coverage]
+22:07:14.696 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 6
+22:07:14.698 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 17112 regions for 6 with 0 includes and 0 excludes
+22:07:14.698 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 6
+22:07:49.004 [Thread-0] INFO org.qcmg.motif.CoverageJob - 6:
+read 13626470 records, of which 13626470 satisfied the query
+number in counterIn instance is: 96316029
+number in counterOut instance is: 96316029
+
+22:07:49.004 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 6
+22:07:49.004 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [6 coverage]
+22:07:49.021 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [7 coverage]
+22:07:49.021 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [7 coverage]
+22:07:49.021 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 7
+22:07:49.023 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 15914 regions for 7 with 0 includes and 0 excludes
+22:07:49.023 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 7
+22:08:21.378 [Thread-0] INFO org.qcmg.motif.CoverageJob - 7:
+read 12413894 records, of which 12413894 satisfied the query
+number in counterIn instance is: 108729923
+number in counterOut instance is: 108729923
+
+22:08:21.378 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 7
+22:08:21.378 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [7 coverage]
+22:08:21.388 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [X coverage]
+22:08:21.388 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [X coverage]
+22:08:21.389 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: X
+22:08:21.390 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 15528 regions for X with 0 includes and 0 excludes
+22:08:21.390 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: X
+22:08:40.776 [Thread-0] INFO org.qcmg.motif.CoverageJob - X:
+read 6453679 records, of which 6453679 satisfied the query
+number in counterIn instance is: 115183602
+number in counterOut instance is: 115183602
+
+22:08:40.776 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: X
+22:08:40.776 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [X coverage]
+22:08:40.786 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [8 coverage]
+22:08:40.786 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [8 coverage]
+22:08:40.786 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 8
+22:08:40.788 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 14637 regions for 8 with 0 includes and 0 excludes
+22:08:40.788 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 8
+22:09:08.831 [Thread-0] INFO org.qcmg.motif.CoverageJob - 8:
+read 11669596 records, of which 11669596 satisfied the query
+number in counterIn instance is: 126853198
+number in counterOut instance is: 126853198
+
+22:09:08.831 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 8
+22:09:08.831 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [8 coverage]
+22:09:08.841 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [9 coverage]
+22:09:08.841 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [9 coverage]
+22:09:08.842 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 9
+22:09:08.843 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 14122 regions for 9 with 0 includes and 0 excludes
+22:09:08.843 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 9
+22:09:34.843 [Thread-0] INFO org.qcmg.motif.CoverageJob - 9:
+read 9471035 records, of which 9471035 satisfied the query
+number in counterIn instance is: 136324233
+number in counterOut instance is: 136324233
+
+22:09:34.844 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 9
+22:09:34.844 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [9 coverage]
+22:09:34.856 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [10 coverage]
+22:09:34.856 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [10 coverage]
+22:09:34.856 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 10
+22:09:34.857 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 13554 regions for 10 with 0 includes and 0 excludes
+22:09:34.857 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 10
+22:10:02.064 [Thread-0] INFO org.qcmg.motif.CoverageJob - 10:
+read 10439385 records, of which 10439385 satisfied the query
+number in counterIn instance is: 146763618
+number in counterOut instance is: 146763618
+
+22:10:02.076 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 10
+22:10:02.076 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [10 coverage]
+22:10:02.098 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [11 coverage]
+22:10:02.099 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [11 coverage]
+22:10:02.099 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 11
+22:10:02.100 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 13501 regions for 11 with 0 includes and 0 excludes
+22:10:02.100 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 11
+22:10:28.020 [Thread-0] INFO org.qcmg.motif.CoverageJob - 11:
+read 10493077 records, of which 10493077 satisfied the query
+number in counterIn instance is: 157256695
+number in counterOut instance is: 157256695
+
+22:10:28.020 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 11
+22:10:28.021 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [11 coverage]
+22:10:28.030 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [12 coverage]
+22:10:28.030 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [12 coverage]
+22:10:28.030 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 12
+22:10:28.031 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 13386 regions for 12 with 0 includes and 0 excludes
+22:10:28.032 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 12
+22:10:55.282 [Thread-0] INFO org.qcmg.motif.CoverageJob - 12:
+read 10535559 records, of which 10535559 satisfied the query
+number in counterIn instance is: 167792254
+number in counterOut instance is: 167792254
+
+22:10:55.283 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 12
+22:10:55.283 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [12 coverage]
+22:10:55.291 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [unmapped coverage]
+22:10:55.291 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [unmapped coverage]
+22:10:55.291 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: unmapped
+22:10:55.294 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 12801 regions for unmapped with 0 includes and 0 excludes
+22:10:55.295 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: unmapped
+22:10:55.334 [Thread-0] INFO org.qcmg.motif.CoverageJob - unmapped:
+read 0 records, of which 0 satisfied the query
+number in counterIn instance is: 167792254
+number in counterOut instance is: 167792254
+
+22:10:55.334 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: unmapped
+22:10:55.334 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [unmapped coverage]
+22:10:55.344 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [13 coverage]
+22:10:55.344 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [13 coverage]
+22:10:55.344 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 13
+22:10:55.345 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 11517 regions for 13 with 0 includes and 0 excludes
+22:10:55.345 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 13
+22:11:13.638 [Thread-0] INFO org.qcmg.motif.CoverageJob - 13:
+read 7534104 records, of which 7534104 satisfied the query
+number in counterIn instance is: 175326358
+number in counterOut instance is: 175326358
+
+22:11:13.638 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 13
+22:11:13.638 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [13 coverage]
+22:11:13.646 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [14 coverage]
+22:11:13.647 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [14 coverage]
+22:11:13.647 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 14
+22:11:13.648 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 10735 regions for 14 with 0 includes and 0 excludes
+22:11:13.648 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 14
+22:11:43.041 [Thread-0] INFO org.qcmg.motif.CoverageJob - 14:
+read 7140055 records, of which 7140055 satisfied the query
+number in counterIn instance is: 182466413
+number in counterOut instance is: 182466413
+
+22:11:43.041 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 14
+22:11:43.041 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [14 coverage]
+22:11:43.049 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [15 coverage]
+22:11:43.049 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [15 coverage]
+22:11:43.049 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 15
+22:11:43.050 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 10254 regions for 15 with 0 includes and 0 excludes
+22:11:43.050 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 15
+22:11:59.730 [Thread-0] INFO org.qcmg.motif.CoverageJob - 15:
+read 6634728 records, of which 6634728 satisfied the query
+number in counterIn instance is: 189101141
+number in counterOut instance is: 189101141
+
+22:11:59.730 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 15
+22:11:59.730 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [15 coverage]
+22:11:59.737 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [16 coverage]
+22:11:59.737 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [16 coverage]
+22:11:59.737 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 16
+22:11:59.738 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 9036 regions for 16 with 0 includes and 0 excludes
+22:11:59.738 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 16
+22:12:27.754 [Thread-0] INFO org.qcmg.motif.CoverageJob - 16:
+read 7273064 records, of which 7273064 satisfied the query
+number in counterIn instance is: 196374205
+number in counterOut instance is: 196374205
+
+22:12:27.754 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 16
+22:12:27.754 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [16 coverage]
+22:12:27.760 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [17 coverage]
+22:12:27.760 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [17 coverage]
+22:12:27.760 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 17
+22:12:27.761 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 8120 regions for 17 with 0 includes and 0 excludes
+22:12:27.761 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 17
+22:12:42.754 [Thread-0] INFO org.qcmg.motif.CoverageJob - 17:
+read 6146437 records, of which 6146437 satisfied the query
+number in counterIn instance is: 202520642
+number in counterOut instance is: 202520642
+
+22:12:42.754 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 17
+22:12:42.754 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [17 coverage]
+22:12:42.759 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [18 coverage]
+22:12:42.759 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [18 coverage]
+22:12:42.760 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 18
+22:12:42.760 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 7808 regions for 18 with 0 includes and 0 excludes
+22:12:42.760 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 18
+22:13:07.981 [Thread-0] INFO org.qcmg.motif.CoverageJob - 18:
+read 5957144 records, of which 5957144 satisfied the query
+number in counterIn instance is: 208477786
+number in counterOut instance is: 208477786
+
+22:13:07.981 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 18
+22:13:07.981 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [18 coverage]
+22:13:07.991 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [20 coverage]
+22:13:07.991 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [20 coverage]
+22:13:07.991 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 20
+22:13:07.992 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 6303 regions for 20 with 0 includes and 0 excludes
+22:13:07.993 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 20
+22:13:25.685 [Thread-0] INFO org.qcmg.motif.CoverageJob - 20:
+read 4691391 records, of which 4691391 satisfied the query
+number in counterIn instance is: 213169177
+number in counterOut instance is: 213169177
+
+22:13:25.685 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 20
+22:13:25.686 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [20 coverage]
+22:13:25.690 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [Y coverage]
+22:13:25.690 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [Y coverage]
+22:13:25.690 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: Y
+22:13:25.690 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5938 regions for Y with 0 includes and 0 excludes
+22:13:25.690 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: Y
+22:13:30.494 [Thread-0] INFO org.qcmg.motif.CoverageJob - Y:
+read 2098268 records, of which 2098268 satisfied the query
+number in counterIn instance is: 215267445
+number in counterOut instance is: 215267445
+
+22:13:30.494 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: Y
+22:13:30.494 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [Y coverage]
+22:13:30.503 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [19 coverage]
+22:13:30.503 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [19 coverage]
+22:13:30.503 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 19
+22:13:30.503 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5913 regions for 19 with 0 includes and 0 excludes
+22:13:30.504 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 19
+22:13:41.205 [Thread-0] INFO org.qcmg.motif.CoverageJob - 19:
+read 4214396 records, of which 4214396 satisfied the query
+number in counterIn instance is: 219481841
+number in counterOut instance is: 219481841
+
+22:13:41.205 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 19
+22:13:41.205 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [19 coverage]
+22:13:41.210 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [22 coverage]
+22:13:41.210 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [22 coverage]
+22:13:41.210 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 22
+22:13:41.210 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5131 regions for 22 with 0 includes and 0 excludes
+22:13:41.210 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 22
+22:13:47.811 [Thread-0] INFO org.qcmg.motif.CoverageJob - 22:
+read 2662776 records, of which 2662776 satisfied the query
+number in counterIn instance is: 222144617
+number in counterOut instance is: 222144617
+
+22:13:47.811 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 22
+22:13:47.811 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [22 coverage]
+22:13:47.815 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [21 coverage]
+22:13:47.815 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [21 coverage]
+22:13:47.815 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: 21
+22:13:47.816 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4813 regions for 21 with 0 includes and 0 excludes
+22:13:47.816 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: 21
+22:14:13.763 [Thread-0] INFO org.qcmg.motif.CoverageJob - 21:
+read 2918734 records, of which 2918734 satisfied the query
+number in counterIn instance is: 225063351
+number in counterOut instance is: 225063351
+
+22:14:13.763 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: 21
+22:14:13.763 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [21 coverage]
+22:14:13.766 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [hs37d5 coverage]
+22:14:13.766 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [hs37d5 coverage]
+22:14:13.766 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: hs37d5
+22:14:13.767 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 3548 regions for hs37d5 with 0 includes and 0 excludes
+22:14:13.767 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: hs37d5
+22:15:01.238 [Thread-0] INFO org.qcmg.motif.CoverageJob - hs37d5:
+read 12988530 records, of which 12988530 satisfied the query
+number in counterIn instance is: 238051881
+number in counterOut instance is: 238051881
+
+22:15:01.238 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: hs37d5
+22:15:01.238 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [hs37d5 coverage]
+22:15:01.241 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000192.1 coverage]
+22:15:01.241 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000192.1 coverage]
+22:15:01.241 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000192.1
+22:15:01.241 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 55 regions for GL000192.1 with 0 includes and 0 excludes
+22:15:01.241 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000192.1
+22:15:01.384 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000192.1:
+read 43170 records, of which 43170 satisfied the query
+number in counterIn instance is: 238095051
+number in counterOut instance is: 238095051
+
+22:15:01.384 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000192.1
+22:15:01.384 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000192.1 coverage]
+22:15:01.384 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000225.1 coverage]
+22:15:01.384 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000225.1 coverage]
+22:15:01.385 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000225.1
+22:15:01.385 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 22 regions for GL000225.1 with 0 includes and 0 excludes
+22:15:01.385 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000225.1
+22:15:01.483 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000225.1:
+read 28618 records, of which 28618 satisfied the query
+number in counterIn instance is: 238123669
+number in counterOut instance is: 238123669
+
+22:15:01.483 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000225.1
+22:15:01.484 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000225.1 coverage]
+22:15:01.484 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000194.1 coverage]
+22:15:01.484 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000194.1 coverage]
+22:15:01.484 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000194.1
+22:15:01.484 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 20 regions for GL000194.1 with 0 includes and 0 excludes
+22:15:01.484 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000194.1
+22:15:01.560 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000194.1:
+read 23503 records, of which 23503 satisfied the query
+number in counterIn instance is: 238147172
+number in counterOut instance is: 238147172
+
+22:15:01.560 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000194.1
+22:15:01.560 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000194.1 coverage]
+22:15:01.560 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000193.1 coverage]
+22:15:01.560 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000193.1 coverage]
+22:15:01.560 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000193.1
+22:15:01.561 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 19 regions for GL000193.1 with 0 includes and 0 excludes
+22:15:01.561 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000193.1
+22:15:01.648 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000193.1:
+read 28819 records, of which 28819 satisfied the query
+number in counterIn instance is: 238175991
+number in counterOut instance is: 238175991
+
+22:15:01.649 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000193.1
+22:15:01.649 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000193.1 coverage]
+22:15:01.649 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000200.1 coverage]
+22:15:01.649 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000200.1 coverage]
+22:15:01.649 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000200.1
+22:15:01.650 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 19 regions for GL000200.1 with 0 includes and 0 excludes
+22:15:01.650 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000200.1
+22:15:01.679 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000200.1:
+read 5177 records, of which 5177 satisfied the query
+number in counterIn instance is: 238181168
+number in counterOut instance is: 238181168
+
+22:15:01.679 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000200.1
+22:15:01.679 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000200.1 coverage]
+22:15:01.679 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000222.1 coverage]
+22:15:01.679 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000222.1 coverage]
+22:15:01.679 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000222.1
+22:15:01.680 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 19 regions for GL000222.1 with 0 includes and 0 excludes
+22:15:01.680 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000222.1
+22:15:01.713 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000222.1:
+read 7693 records, of which 7693 satisfied the query
+number in counterIn instance is: 238188861
+number in counterOut instance is: 238188861
+
+22:15:01.713 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000222.1
+22:15:01.713 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000222.1 coverage]
+22:15:01.713 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000212.1 coverage]
+22:15:01.713 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000212.1 coverage]
+22:15:01.713 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000212.1
+22:15:01.713 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 19 regions for GL000212.1 with 0 includes and 0 excludes
+22:15:01.713 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000212.1
+22:15:01.777 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000212.1:
+read 19190 records, of which 19190 satisfied the query
+number in counterIn instance is: 238208051
+number in counterOut instance is: 238208051
+
+22:15:01.777 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000212.1
+22:15:01.777 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000212.1 coverage]
+22:15:01.777 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000195.1 coverage]
+22:15:01.777 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000195.1 coverage]
+22:15:01.777 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000195.1
+22:15:01.777 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 19 regions for GL000195.1 with 0 includes and 0 excludes
+22:15:01.777 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000195.1
+22:15:01.922 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000195.1:
+read 54589 records, of which 54589 satisfied the query
+number in counterIn instance is: 238262640
+number in counterOut instance is: 238262640
+
+22:15:01.922 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000195.1
+22:15:01.922 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000195.1 coverage]
+22:15:01.923 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000223.1 coverage]
+22:15:01.923 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000223.1 coverage]
+22:15:01.923 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000223.1
+22:15:01.923 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 19 regions for GL000223.1 with 0 includes and 0 excludes
+22:15:01.923 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000223.1
+22:15:01.958 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000223.1:
+read 7396 records, of which 7396 satisfied the query
+number in counterIn instance is: 238270036
+number in counterOut instance is: 238270036
+
+22:15:01.958 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000223.1
+22:15:01.958 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000223.1 coverage]
+22:15:01.958 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000224.1 coverage]
+22:15:01.958 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000224.1 coverage]
+22:15:01.958 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000224.1
+22:15:01.958 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 18 regions for GL000224.1 with 0 includes and 0 excludes
+22:15:01.958 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000224.1
+22:15:02.183 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000224.1:
+read 90646 records, of which 90646 satisfied the query
+number in counterIn instance is: 238360682
+number in counterOut instance is: 238360682
+
+22:15:02.183 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000224.1
+22:15:02.183 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000224.1 coverage]
+22:15:02.183 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000219.1 coverage]
+22:15:02.183 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000219.1 coverage]
+22:15:02.183 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000219.1
+22:15:02.183 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 18 regions for GL000219.1 with 0 includes and 0 excludes
+22:15:02.183 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000219.1
+22:15:02.249 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000219.1:
+read 20238 records, of which 20238 satisfied the query
+number in counterIn instance is: 238380920
+number in counterOut instance is: 238380920
+
+22:15:02.249 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000219.1
+22:15:02.249 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000219.1 coverage]
+22:15:02.249 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000205.1 coverage]
+22:15:02.249 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000205.1 coverage]
+22:15:02.250 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000205.1
+22:15:02.250 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 18 regions for GL000205.1 with 0 includes and 0 excludes
+22:15:02.250 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000205.1
+22:15:02.377 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000205.1:
+read 47755 records, of which 47755 satisfied the query
+number in counterIn instance is: 238428675
+number in counterOut instance is: 238428675
+
+22:15:02.377 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000205.1
+22:15:02.377 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000205.1 coverage]
+22:15:02.378 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000215.1 coverage]
+22:15:02.378 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000215.1 coverage]
+22:15:02.378 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000215.1
+22:15:02.378 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 18 regions for GL000215.1 with 0 includes and 0 excludes
+22:15:02.378 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000215.1
+22:15:02.408 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000215.1:
+read 5653 records, of which 5653 satisfied the query
+number in counterIn instance is: 238434328
+number in counterOut instance is: 238434328
+
+22:15:02.408 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000215.1
+22:15:02.408 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000215.1 coverage]
+22:15:02.408 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000216.1 coverage]
+22:15:02.409 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000216.1 coverage]
+22:15:02.409 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000216.1
+22:15:02.409 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 18 regions for GL000216.1 with 0 includes and 0 excludes
+22:15:02.409 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000216.1
+22:15:02.496 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000216.1:
+read 30625 records, of which 30625 satisfied the query
+number in counterIn instance is: 238464953
+number in counterOut instance is: 238464953
+
+22:15:02.496 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000216.1
+22:15:02.496 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000216.1 coverage]
+22:15:02.496 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000217.1 coverage]
+22:15:02.496 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000217.1 coverage]
+22:15:02.496 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000217.1
+22:15:02.496 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 18 regions for GL000217.1 with 0 includes and 0 excludes
+22:15:02.496 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000217.1
+22:15:02.541 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000217.1:
+read 12550 records, of which 12550 satisfied the query
+number in counterIn instance is: 238477503
+number in counterOut instance is: 238477503
+
+22:15:02.541 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000217.1
+22:15:02.541 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000217.1 coverage]
+22:15:02.541 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [NC_007605 coverage]
+22:15:02.541 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [NC_007605 coverage]
+22:15:02.541 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: NC_007605
+22:15:02.542 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 18 regions for NC_007605 with 0 includes and 0 excludes
+22:15:02.542 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: NC_007605
+22:15:02.907 [Thread-0] INFO org.qcmg.motif.CoverageJob - NC_007605:
+read 159277 records, of which 159277 satisfied the query
+number in counterIn instance is: 238636780
+number in counterOut instance is: 238636780
+
+22:15:02.907 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: NC_007605
+22:15:02.907 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [NC_007605 coverage]
+22:15:02.907 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000199.1 coverage]
+22:15:02.908 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000199.1 coverage]
+22:15:02.908 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000199.1
+22:15:02.908 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 17 regions for GL000199.1 with 0 includes and 0 excludes
+22:15:02.908 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000199.1
+22:15:03.402 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000199.1:
+read 216222 records, of which 216222 satisfied the query
+number in counterIn instance is: 238853002
+number in counterOut instance is: 238853002
+
+22:15:03.402 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000199.1
+22:15:03.402 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000199.1 coverage]
+22:15:03.402 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000211.1 coverage]
+22:15:03.402 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000211.1 coverage]
+22:15:03.402 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000211.1
+22:15:03.402 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 17 regions for GL000211.1 with 0 includes and 0 excludes
+22:15:03.402 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000211.1
+22:15:03.451 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000211.1:
+read 13636 records, of which 13636 satisfied the query
+number in counterIn instance is: 238866638
+number in counterOut instance is: 238866638
+
+22:15:03.451 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000211.1
+22:15:03.451 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000211.1 coverage]
+22:15:03.452 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000213.1 coverage]
+22:15:03.452 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000213.1 coverage]
+22:15:03.452 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000213.1
+22:15:03.452 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 17 regions for GL000213.1 with 0 includes and 0 excludes
+22:15:03.452 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000213.1
+22:15:03.480 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000213.1:
+read 6779 records, of which 6779 satisfied the query
+number in counterIn instance is: 238873417
+number in counterOut instance is: 238873417
+
+22:15:03.480 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000213.1
+22:15:03.480 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000213.1 coverage]
+22:15:03.480 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000220.1 coverage]
+22:15:03.480 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000220.1 coverage]
+22:15:03.481 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000220.1
+22:15:03.481 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 17 regions for GL000220.1 with 0 includes and 0 excludes
+22:15:03.481 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000220.1
+22:15:05.124 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000220.1:
+read 701601 records, of which 701601 satisfied the query
+number in counterIn instance is: 239575018
+number in counterOut instance is: 239575018
+
+22:15:05.124 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000220.1
+22:15:05.124 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000220.1 coverage]
+22:15:05.124 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000218.1 coverage]
+22:15:05.124 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000218.1 coverage]
+22:15:05.124 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000218.1
+22:15:05.124 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 17 regions for GL000218.1 with 0 includes and 0 excludes
+22:15:05.124 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000218.1
+22:15:05.218 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000218.1:
+read 34157 records, of which 34157 satisfied the query
+number in counterIn instance is: 239609175
+number in counterOut instance is: 239609175
+
+22:15:05.218 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000218.1
+22:15:05.218 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000218.1 coverage]
+22:15:05.218 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000209.1 coverage]
+22:15:05.218 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000209.1 coverage]
+22:15:05.218 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000209.1
+22:15:05.219 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 16 regions for GL000209.1 with 0 includes and 0 excludes
+22:15:05.219 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000209.1
+22:15:05.240 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000209.1:
+read 4554 records, of which 4554 satisfied the query
+number in counterIn instance is: 239613729
+number in counterOut instance is: 239613729
+
+22:15:05.240 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000209.1
+22:15:05.240 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000209.1 coverage]
+22:15:05.240 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000221.1 coverage]
+22:15:05.240 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000221.1 coverage]
+22:15:05.240 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000221.1
+22:15:05.241 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 16 regions for GL000221.1 with 0 includes and 0 excludes
+22:15:05.241 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000221.1
+22:15:05.310 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000221.1:
+read 23815 records, of which 23815 satisfied the query
+number in counterIn instance is: 239637544
+number in counterOut instance is: 239637544
+
+22:15:05.310 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000221.1
+22:15:05.310 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000221.1 coverage]
+22:15:05.310 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000214.1 coverage]
+22:15:05.310 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000214.1 coverage]
+22:15:05.310 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000214.1
+22:15:05.310 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 14 regions for GL000214.1 with 0 includes and 0 excludes
+22:15:05.310 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000214.1
+22:15:05.544 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000214.1:
+read 93353 records, of which 93353 satisfied the query
+number in counterIn instance is: 239730897
+number in counterOut instance is: 239730897
+
+22:15:05.544 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000214.1
+22:15:05.544 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000214.1 coverage]
+22:15:05.544 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000228.1 coverage]
+22:15:05.544 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000228.1 coverage]
+22:15:05.545 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000228.1
+22:15:05.545 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 13 regions for GL000228.1 with 0 includes and 0 excludes
+22:15:05.545 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000228.1
+22:15:05.579 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000228.1:
+read 9403 records, of which 9403 satisfied the query
+number in counterIn instance is: 239740300
+number in counterOut instance is: 239740300
+
+22:15:05.579 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000228.1
+22:15:05.579 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000228.1 coverage]
+22:15:05.579 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000227.1 coverage]
+22:15:05.579 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000227.1 coverage]
+22:15:05.579 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000227.1
+22:15:05.579 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 13 regions for GL000227.1 with 0 includes and 0 excludes
+22:15:05.579 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000227.1
+22:15:05.608 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000227.1:
+read 5948 records, of which 5948 satisfied the query
+number in counterIn instance is: 239746248
+number in counterOut instance is: 239746248
+
+22:15:05.608 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000227.1
+22:15:05.608 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000227.1 coverage]
+22:15:05.608 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000191.1 coverage]
+22:15:05.608 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000191.1 coverage]
+22:15:05.608 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000191.1
+22:15:05.608 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 11 regions for GL000191.1 with 0 includes and 0 excludes
+22:15:05.608 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000191.1
+22:15:05.634 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000191.1:
+read 4835 records, of which 4835 satisfied the query
+number in counterIn instance is: 239751083
+number in counterOut instance is: 239751083
+
+22:15:05.634 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000191.1
+22:15:05.634 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000191.1 coverage]
+22:15:05.635 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000208.1 coverage]
+22:15:05.635 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000208.1 coverage]
+22:15:05.635 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000208.1
+22:15:05.635 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 10 regions for GL000208.1 with 0 includes and 0 excludes
+22:15:05.635 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000208.1
+22:15:05.726 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000208.1:
+read 33287 records, of which 33287 satisfied the query
+number in counterIn instance is: 239784370
+number in counterOut instance is: 239784370
+
+22:15:05.727 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000208.1
+22:15:05.727 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000208.1 coverage]
+22:15:05.727 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000198.1 coverage]
+22:15:05.727 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000198.1 coverage]
+22:15:05.727 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000198.1
+22:15:05.727 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 10 regions for GL000198.1 with 0 includes and 0 excludes
+22:15:05.727 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000198.1
+22:15:05.759 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000198.1:
+read 6528 records, of which 6528 satisfied the query
+number in counterIn instance is: 239790898
+number in counterOut instance is: 239790898
+
+22:15:05.759 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000198.1
+22:15:05.759 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000198.1 coverage]
+22:15:05.759 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000204.1 coverage]
+22:15:05.759 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000204.1 coverage]
+22:15:05.759 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000204.1
+22:15:05.759 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 9 regions for GL000204.1 with 0 includes and 0 excludes
+22:15:05.760 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000204.1
+22:15:05.775 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000204.1:
+read 4272 records, of which 4272 satisfied the query
+number in counterIn instance is: 239795170
+number in counterOut instance is: 239795170
+
+22:15:05.775 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000204.1
+22:15:05.775 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000204.1 coverage]
+22:15:05.775 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000233.1 coverage]
+22:15:05.775 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000233.1 coverage]
+22:15:05.775 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000233.1
+22:15:05.776 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000233.1 with 0 includes and 0 excludes
+22:15:05.776 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000233.1
+22:15:05.795 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000233.1:
+read 4021 records, of which 4021 satisfied the query
+number in counterIn instance is: 239799191
+number in counterOut instance is: 239799191
+
+22:15:05.796 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000233.1
+22:15:05.796 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000233.1 coverage]
+22:15:05.796 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000237.1 coverage]
+22:15:05.796 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000237.1 coverage]
+22:15:05.796 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000237.1
+22:15:05.796 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000237.1 with 0 includes and 0 excludes
+22:15:05.796 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000237.1
+22:15:05.844 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000237.1:
+read 13551 records, of which 13551 satisfied the query
+number in counterIn instance is: 239812742
+number in counterOut instance is: 239812742
+
+22:15:05.844 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000237.1
+22:15:05.844 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000237.1 coverage]
+22:15:05.844 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000230.1 coverage]
+22:15:05.844 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000230.1 coverage]
+22:15:05.844 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000230.1
+22:15:05.845 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000230.1 with 0 includes and 0 excludes
+22:15:05.845 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000230.1
+22:15:05.860 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000230.1:
+read 3032 records, of which 3032 satisfied the query
+number in counterIn instance is: 239815774
+number in counterOut instance is: 239815774
+
+22:15:05.860 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000230.1
+22:15:05.860 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000230.1 coverage]
+22:15:05.860 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000242.1 coverage]
+22:15:05.860 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000242.1 coverage]
+22:15:05.860 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000242.1
+22:15:05.860 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000242.1 with 0 includes and 0 excludes
+22:15:05.860 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000242.1
+22:15:05.875 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000242.1:
+read 1571 records, of which 1571 satisfied the query
+number in counterIn instance is: 239817345
+number in counterOut instance is: 239817345
+
+22:15:05.876 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000242.1
+22:15:05.876 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000242.1 coverage]
+22:15:05.876 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000243.1 coverage]
+22:15:05.876 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000243.1 coverage]
+22:15:05.876 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000243.1
+22:15:05.876 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000243.1 with 0 includes and 0 excludes
+22:15:05.876 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000243.1
+22:15:05.899 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000243.1:
+read 5968 records, of which 5968 satisfied the query
+number in counterIn instance is: 239823313
+number in counterOut instance is: 239823313
+
+22:15:05.899 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000243.1
+22:15:05.899 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000243.1 coverage]
+22:15:05.899 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000241.1 coverage]
+22:15:05.899 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000241.1 coverage]
+22:15:05.899 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000241.1
+22:15:05.899 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000241.1 with 0 includes and 0 excludes
+22:15:05.899 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000241.1
+22:15:05.930 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000241.1:
+read 7648 records, of which 7648 satisfied the query
+number in counterIn instance is: 239830961
+number in counterOut instance is: 239830961
+
+22:15:05.930 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000241.1
+22:15:05.930 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000241.1 coverage]
+22:15:05.930 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000236.1 coverage]
+22:15:05.930 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000236.1 coverage]
+22:15:05.930 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000236.1
+22:15:05.930 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000236.1 with 0 includes and 0 excludes
+22:15:05.930 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000236.1
+22:15:05.948 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000236.1:
+read 1911 records, of which 1911 satisfied the query
+number in counterIn instance is: 239832872
+number in counterOut instance is: 239832872
+
+22:15:05.948 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000236.1
+22:15:05.948 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000236.1 coverage]
+22:15:05.948 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000240.1 coverage]
+22:15:05.948 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000240.1 coverage]
+22:15:05.948 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000240.1
+22:15:05.948 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000240.1 with 0 includes and 0 excludes
+22:15:05.948 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000240.1
+22:15:05.960 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000240.1:
+read 2938 records, of which 2938 satisfied the query
+number in counterIn instance is: 239835810
+number in counterOut instance is: 239835810
+
+22:15:05.960 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000240.1
+22:15:05.960 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000240.1 coverage]
+22:15:05.960 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000206.1 coverage]
+22:15:05.960 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000206.1 coverage]
+22:15:05.960 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000206.1
+22:15:05.960 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000206.1 with 0 includes and 0 excludes
+22:15:05.960 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000206.1
+22:15:05.967 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000206.1:
+read 1245 records, of which 1245 satisfied the query
+number in counterIn instance is: 239837055
+number in counterOut instance is: 239837055
+
+22:15:05.967 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000206.1
+22:15:05.967 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000206.1 coverage]
+22:15:05.967 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000232.1 coverage]
+22:15:05.967 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000232.1 coverage]
+22:15:05.968 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000232.1
+22:15:05.968 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000232.1 with 0 includes and 0 excludes
+22:15:05.968 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000232.1
+22:15:05.993 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000232.1:
+read 6089 records, of which 6089 satisfied the query
+number in counterIn instance is: 239843144
+number in counterOut instance is: 239843144
+
+22:15:05.993 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000232.1
+22:15:05.993 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000232.1 coverage]
+22:15:05.993 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000234.1 coverage]
+22:15:05.993 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000234.1 coverage]
+22:15:05.993 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000234.1
+22:15:05.993 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000234.1 with 0 includes and 0 excludes
+22:15:05.993 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000234.1
+22:15:06.021 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000234.1:
+read 5935 records, of which 5935 satisfied the query
+number in counterIn instance is: 239849079
+number in counterOut instance is: 239849079
+
+22:15:06.021 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000234.1
+22:15:06.021 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000234.1 coverage]
+22:15:06.021 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000202.1 coverage]
+22:15:06.021 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000202.1 coverage]
+22:15:06.021 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000202.1
+22:15:06.021 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 5 regions for GL000202.1 with 0 includes and 0 excludes
+22:15:06.021 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000202.1
+22:15:06.030 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000202.1:
+read 1960 records, of which 1960 satisfied the query
+number in counterIn instance is: 239851039
+number in counterOut instance is: 239851039
+
+22:15:06.031 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000202.1
+22:15:06.031 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000202.1 coverage]
+22:15:06.031 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000238.1 coverage]
+22:15:06.031 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000238.1 coverage]
+22:15:06.031 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000238.1
+22:15:06.031 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000238.1 with 0 includes and 0 excludes
+22:15:06.031 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000238.1
+22:15:06.039 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000238.1:
+read 1737 records, of which 1737 satisfied the query
+number in counterIn instance is: 239852776
+number in counterOut instance is: 239852776
+
+22:15:06.039 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000238.1
+22:15:06.039 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000238.1 coverage]
+22:15:06.039 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000244.1 coverage]
+22:15:06.039 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000244.1 coverage]
+22:15:06.039 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000244.1
+22:15:06.039 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000244.1 with 0 includes and 0 excludes
+22:15:06.039 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000244.1
+22:15:06.058 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000244.1:
+read 3578 records, of which 3578 satisfied the query
+number in counterIn instance is: 239856354
+number in counterOut instance is: 239856354
+
+22:15:06.058 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000244.1
+22:15:06.058 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000244.1 coverage]
+22:15:06.058 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000248.1 coverage]
+22:15:06.058 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000248.1 coverage]
+22:15:06.058 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000248.1
+22:15:06.059 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000248.1 with 0 includes and 0 excludes
+22:15:06.059 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000248.1
+22:15:06.066 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000248.1:
+read 1556 records, of which 1556 satisfied the query
+number in counterIn instance is: 239857910
+number in counterOut instance is: 239857910
+
+22:15:06.066 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000248.1
+22:15:06.066 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000248.1 coverage]
+22:15:06.066 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000196.1 coverage]
+22:15:06.066 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000196.1 coverage]
+22:15:06.066 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000196.1
+22:15:06.066 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000196.1 with 0 includes and 0 excludes
+22:15:06.066 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000196.1
+22:15:06.075 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000196.1:
+read 1914 records, of which 1914 satisfied the query
+number in counterIn instance is: 239859824
+number in counterOut instance is: 239859824
+
+22:15:06.075 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000196.1
+22:15:06.075 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000196.1 coverage]
+22:15:06.075 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000249.1 coverage]
+22:15:06.075 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000249.1 coverage]
+22:15:06.075 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000249.1
+22:15:06.075 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000249.1 with 0 includes and 0 excludes
+22:15:06.075 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000249.1
+22:15:06.090 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000249.1:
+read 1327 records, of which 1327 satisfied the query
+number in counterIn instance is: 239861151
+number in counterOut instance is: 239861151
+
+22:15:06.090 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000249.1
+22:15:06.090 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000249.1 coverage]
+22:15:06.091 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000246.1 coverage]
+22:15:06.091 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000246.1 coverage]
+22:15:06.091 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000246.1
+22:15:06.091 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000246.1 with 0 includes and 0 excludes
+22:15:06.091 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000246.1
+22:15:06.099 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000246.1:
+read 1760 records, of which 1760 satisfied the query
+number in counterIn instance is: 239862911
+number in counterOut instance is: 239862911
+
+22:15:06.099 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000246.1
+22:15:06.099 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000246.1 coverage]
+22:15:06.099 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000203.1 coverage]
+22:15:06.099 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000203.1 coverage]
+22:15:06.099 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000203.1
+22:15:06.099 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000203.1 with 0 includes and 0 excludes
+22:15:06.099 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000203.1
+22:15:06.107 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000203.1:
+read 1624 records, of which 1624 satisfied the query
+number in counterIn instance is: 239864535
+number in counterOut instance is: 239864535
+
+22:15:06.107 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000203.1
+22:15:06.107 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000203.1 coverage]
+22:15:06.107 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000197.1 coverage]
+22:15:06.107 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000197.1 coverage]
+22:15:06.107 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000197.1
+22:15:06.107 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000197.1 with 0 includes and 0 excludes
+22:15:06.107 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000197.1
+22:15:06.114 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000197.1:
+read 1181 records, of which 1181 satisfied the query
+number in counterIn instance is: 239865716
+number in counterOut instance is: 239865716
+
+22:15:06.114 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000197.1
+22:15:06.114 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000197.1 coverage]
+22:15:06.114 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000245.1 coverage]
+22:15:06.114 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000245.1 coverage]
+22:15:06.114 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000245.1
+22:15:06.114 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000245.1 with 0 includes and 0 excludes
+22:15:06.114 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000245.1
+22:15:06.135 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000245.1:
+read 5545 records, of which 5545 satisfied the query
+number in counterIn instance is: 239871261
+number in counterOut instance is: 239871261
+
+22:15:06.135 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000245.1
+22:15:06.135 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000245.1 coverage]
+22:15:06.135 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000247.1 coverage]
+22:15:06.135 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000247.1 coverage]
+22:15:06.135 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000247.1
+22:15:06.135 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000247.1 with 0 includes and 0 excludes
+22:15:06.135 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000247.1
+22:15:06.152 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000247.1:
+read 3512 records, of which 3512 satisfied the query
+number in counterIn instance is: 239874773
+number in counterOut instance is: 239874773
+
+22:15:06.153 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000247.1
+22:15:06.153 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000247.1 coverage]
+22:15:06.153 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000201.1 coverage]
+22:15:06.153 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000201.1 coverage]
+22:15:06.153 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000201.1
+22:15:06.153 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000201.1 with 0 includes and 0 excludes
+22:15:06.153 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000201.1
+22:15:06.159 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000201.1:
+read 1046 records, of which 1046 satisfied the query
+number in counterIn instance is: 239875819
+number in counterOut instance is: 239875819
+
+22:15:06.159 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000201.1
+22:15:06.159 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000201.1 coverage]
+22:15:06.159 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000235.1 coverage]
+22:15:06.159 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000235.1 coverage]
+22:15:06.159 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000235.1
+22:15:06.159 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000235.1 with 0 includes and 0 excludes
+22:15:06.159 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000235.1
+22:15:06.183 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000235.1:
+read 3946 records, of which 3946 satisfied the query
+number in counterIn instance is: 239879765
+number in counterOut instance is: 239879765
+
+22:15:06.183 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000235.1
+22:15:06.183 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000235.1 coverage]
+22:15:06.183 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000239.1 coverage]
+22:15:06.183 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000239.1 coverage]
+22:15:06.184 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000239.1
+22:15:06.184 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 4 regions for GL000239.1 with 0 includes and 0 excludes
+22:15:06.184 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000239.1
+22:15:06.209 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000239.1:
+read 8604 records, of which 8604 satisfied the query
+number in counterIn instance is: 239888369
+number in counterOut instance is: 239888369
+
+22:15:06.210 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000239.1
+22:15:06.210 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000239.1 coverage]
+22:15:06.210 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000210.1 coverage]
+22:15:06.210 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000210.1 coverage]
+22:15:06.210 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000210.1
+22:15:06.210 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 3 regions for GL000210.1 with 0 includes and 0 excludes
+22:15:06.210 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000210.1
+22:15:06.226 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000210.1:
+read 1111 records, of which 1111 satisfied the query
+number in counterIn instance is: 239889480
+number in counterOut instance is: 239889480
+
+22:15:06.227 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000210.1
+22:15:06.227 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000210.1 coverage]
+22:15:06.227 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000231.1 coverage]
+22:15:06.227 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000231.1 coverage]
+22:15:06.227 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000231.1
+22:15:06.227 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 3 regions for GL000231.1 with 0 includes and 0 excludes
+22:15:06.227 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000231.1
+22:15:06.248 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000231.1:
+read 3789 records, of which 3789 satisfied the query
+number in counterIn instance is: 239893269
+number in counterOut instance is: 239893269
+
+22:15:06.248 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000231.1
+22:15:06.248 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000231.1 coverage]
+22:15:06.248 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000229.1 coverage]
+22:15:06.248 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000229.1 coverage]
+22:15:06.248 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000229.1
+22:15:06.248 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 2 regions for GL000229.1 with 0 includes and 0 excludes
+22:15:06.248 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000229.1
+22:15:06.259 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000229.1:
+read 2972 records, of which 2972 satisfied the query
+number in counterIn instance is: 239896241
+number in counterOut instance is: 239896241
+
+22:15:06.259 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000229.1
+22:15:06.259 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000229.1 coverage]
+22:15:06.259 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [MT coverage]
+22:15:06.259 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [MT coverage]
+22:15:06.259 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: MT
+22:15:06.259 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 2 regions for MT with 0 includes and 0 excludes
+22:15:06.259 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: MT
+22:15:07.348 [Thread-0] INFO org.qcmg.motif.CoverageJob - MT:
+read 508889 records, of which 508889 satisfied the query
+number in counterIn instance is: 240405130
+number in counterOut instance is: 240405130
+
+22:15:07.348 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: MT
+22:15:07.348 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [MT coverage]
+22:15:07.349 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000226.1 coverage]
+22:15:07.349 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000226.1 coverage]
+22:15:07.349 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000226.1
+22:15:07.349 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 2 regions for GL000226.1 with 0 includes and 0 excludes
+22:15:07.349 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000226.1
+22:15:08.204 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000226.1:
+read 380307 records, of which 380307 satisfied the query
+number in counterIn instance is: 240785437
+number in counterOut instance is: 240785437
+
+22:15:08.205 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000226.1
+22:15:08.205 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000226.1 coverage]
+22:15:08.205 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 obtained job [GL000207.1 coverage]
+22:15:08.205 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 running job [GL000207.1 coverage]
+22:15:08.205 [Thread-0] INFO org.qcmg.motif.CoverageJob - Starting job for: GL000207.1
+22:15:08.205 [Thread-0] INFO org.qcmg.motif.CoverageJob - created 1 regions for GL000207.1 with 0 includes and 0 excludes
+22:15:08.205 [Thread-0] INFO org.qcmg.motif.CoverageJob - Performing coverage for: GL000207.1
+22:15:08.209 [Thread-0] INFO org.qcmg.motif.CoverageJob - GL000207.1:
+read 384 records, of which 384 satisfied the query
+number in counterIn instance is: 240785821
+number in counterOut instance is: 240785821
+
+22:15:08.209 [Thread-0] INFO org.qcmg.motif.CoverageJob - Ending job for: GL000207.1
+22:15:08.209 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completed job [GL000207.1 coverage]
+22:15:08.210 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 completing due to end of job queue
+22:15:08.210 [Thread-0] INFO org.qcmg.motif.WorkerThread - Thread-0 reducing results from handled jobs
+22:15:08.294 [main] INFO org.qcmg.motif.JobQueue - All jobs completed
+22:15:08.295 [main] INFO org.qcmg.motif.JobQueue - Writing output: 588
+22:15:08.824 [main] INFO org.qcmg.motif.JobQueue - DONE - Writing output
+22:15:08.824 [main] INFO org.qcmg.motif.JobQueue - total number from input is 240785821
+22:15:08.824 [main] INFO org.qcmg.motif.JobQueue - total number of reads (satisfied by the query if query provided) count to coverage is 240785821
+22:15:08.824 [main] INFO org.qcmg.motif.JobQueue - Performing final reduce step on results
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - SUMMARY: (window size: 10000, cutoff: 5)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 1:10001-20000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 19, stage 2 coverage: 19, # FS motifs: 28(30), # RS motifs: 7(7)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 1:670001-680000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 2, stage 2 coverage: 2, # FS motifs: 5(5), # RS motifs: 0(0)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 1:209680001-209690000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 0(0), # RS motifs: 2(3)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 1:249230001-249240000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 5, stage 2 coverage: 5, # FS motifs: 12(12), # RS motifs: 4(4)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 1:249240001-249250000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 6, stage 2 coverage: 6, # FS motifs: 6(6), # RS motifs: 9(10)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 2:182140001-182150000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 1(1), # RS motifs: 0(0)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 2:243150001-243160000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 3, stage 2 coverage: 3, # FS motifs: 5(5), # RS motifs: 2(2)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 3:57820001-57830000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 0(0), # RS motifs: 3(3)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 3:197900001-197910000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 4, stage 2 coverage: 4, # FS motifs: 8(8), # RS motifs: 5(5)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 4:10001-20000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 7, stage 2 coverage: 7, # FS motifs: 4(4), # RS motifs: 9(22)
+22:15:09.518 [main] INFO org.qcmg.motif.JobQueue - 4:20001-30000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 4, stage 2 coverage: 4, # FS motifs: 1(3), # RS motifs: 1(1)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 4:191040001-191050000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 28, stage 2 coverage: 28, # FS motifs: 11(11), # RS motifs: 50(63)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 5:10001-20000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 213, stage 2 coverage: 213, # FS motifs: 210(251), # RS motifs: 69(106)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 5:20001-30000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 2, stage 2 coverage: 2, # FS motifs: 0(0), # RS motifs: 4(4)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 5:114610001-114620000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 0(0), # RS motifs: 2(5)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 6:140001-150000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 2, stage 2 coverage: 2, # FS motifs: 4(4), # RS motifs: 2(2)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 7:10001-20000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 3, stage 2 coverage: 3, # FS motifs: 6(6), # RS motifs: 1(1)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 7:159120001-159130000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 2, stage 2 coverage: 2, # FS motifs: 7(9), # RS motifs: 0(0)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 8:150001-160000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 0(0), # RS motifs: 3(3)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 8:146300001-146310000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 3, stage 2 coverage: 3, # FS motifs: 5(5), # RS motifs: 0(0)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 9:10001-20000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 3, stage 2 coverage: 3, # FS motifs: 4(4), # RS motifs: 4(5)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 9:141120001-141130000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 3, stage 2 coverage: 3, # FS motifs: 3(3), # RS motifs: 4(4)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 10:135520001-135530000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 3, stage 2 coverage: 3, # FS motifs: 7(7), # RS motifs: 0(0)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 11:170001-180000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 3(3), # RS motifs: 0(0)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 11:190001-200000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 2, stage 2 coverage: 2, # FS motifs: 5(5), # RS motifs: 0(0)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 11:134940001-134950000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 2, stage 2 coverage: 2, # FS motifs: 7(7), # RS motifs: 0(0)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 12:90001-100000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 45, stage 2 coverage: 45, # FS motifs: 11(11), # RS motifs: 64(69)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 12:133840001-133850000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 41, stage 2 coverage: 41, # FS motifs: 6(11), # RS motifs: 61(71)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 15:33640001-33650000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 0(0), # RS motifs: 4(4)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 15:102520001-102530000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 10, stage 2 coverage: 10, # FS motifs: 3(3), # RS motifs: 19(20)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 16:60001-70000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 0(0), # RS motifs: 4(4)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 16:90180001-90190000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 0(0), # RS motifs: 2(2)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 18:10001-20000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 4, stage 2 coverage: 4, # FS motifs: 8(8), # RS motifs: 2(3)
+22:15:09.519 [main] INFO org.qcmg.motif.JobQueue - 18:60001-70000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 3, stage 2 coverage: 3, # FS motifs: 0(0), # RS motifs: 6(13)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - 18:100001-110000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 0(0), # RS motifs: 2(2)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - 18:78010001-78020000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 3, stage 2 coverage: 3, # FS motifs: 1(1), # RS motifs: 3(3)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - 19:240001-250000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 5(5), # RS motifs: 0(0)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - 19:59110001-59120000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 11, stage 2 coverage: 11, # FS motifs: 10(33), # RS motifs: 11(19)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - 20:62910001-62920000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 2(2), # RS motifs: 0(0)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - 21:39200001-39210000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 0(0), # RS motifs: 1(1)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - 21:48110001-48120000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 3(3), # RS motifs: 0(0)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - GL000227.1:70001-80000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 4, stage 2 coverage: 4, # FS motifs: 5(6), # RS motifs: 2(2)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - GL000228.1:120001-130000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 2, stage 2 coverage: 2, # FS motifs: 3(3), # RS motifs: 0(0)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - hs37d5:6740001-6750000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 35, stage 2 coverage: 35, # FS motifs: 32(32), # RS motifs: 19(21)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - hs37d5:10060001-10070000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 8, stage 2 coverage: 8, # FS motifs: 16(18), # RS motifs: 3(3)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - X:155250001-155260000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 1, stage 2 coverage: 1, # FS motifs: 3(3), # RS motifs: 0(0)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - X:155260001-155270000 [GENOMIC] : TotalCov: 0, stage 1 coverage: 91, stage 2 coverage: 91, # FS motifs: 30(37), # RS motifs: 99(129)
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - motif details:
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - No of unique motifs: 788
+22:15:09.520 [main] INFO org.qcmg.motif.JobQueue - Final reduce step complete
+22:15:10.632 [main] EXEC org.qcmg.motif.Motif - StopTime 2024-06-20 22:15:10
+22:15:10.632 [main] EXEC org.qcmg.motif.Motif - TimeTaken 00:11:51
+22:15:10.632 [main] EXEC org.qcmg.motif.Motif - ExitStatus 0
