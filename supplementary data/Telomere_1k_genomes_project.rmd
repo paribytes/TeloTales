@@ -1,0 +1,721 @@
+---
+title: "Telomere_1k_genomes_project"
+author: "Priyanshi Shah"
+date: "2023-10-29"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(colorspace)
+library(ggplot2)
+library(dplyr)
+library(FSA)
+library(car)
+library(conover.test)
+library(rstatix)
+```
+
+
+```{r setup, include=FALSE}
+#library(tidyverse)
+#library(ggpubr)
+#library(rstatix)
+
+```
+
+
+
+```{r loadingData}
+
+#Setting the path to my working directory where the CSV file is
+setwd("~/Documents/FinalChapter1/Telomere_1kGP_qMotif_Files_PHASE3_Backup2")
+
+telo_data <- read.csv("1k_genome_project_analysis_csv.csv", header = TRUE, row.names = NULL)
+head(telo_data)
+View(telo_data) #Just checking out the data
+
+```
+
+
+
+```{r EliminatingMissingData}
+#If the row has missing data for ScaledTelomericReads, then below line of code will remove that row in the updated "telo_data" dataframe.
+
+telo_data <- telo_data %>% filter(!is.na(ScaledTelomericReads))
+#telo_data <- telo_data %>% filter(!is.na(LogScaledTelomericReads))
+```
+
+
+
+```{r checkin for incosistencies}
+#created a dataframe named super_pop data from the main telo_data and extracting superpopulation name and their corresponding scaled telomeric reads columns to a new dataframe - "superpop_data"
+superpop_data <- telo_data[, c("Superpopulation.name", "ScaledTelomericReads")]
+
+# Removing leading and trailing whitespace if any so i don't get "American Ancestry" and "American Ancestry " as different superpopulations 
+telo_data$Superpopulation.name <- trimws(telo_data$Superpopulation.name)
+
+# Listing unique values in the Superpopulation.name column to make sure all is well (should be getting 5 superpopulations)
+unique(telo_data$Superpopulation.name)
+
+```
+
+
+```{r SettingColorPalette}
+# 26 is the total number of populations thus, no of colors = 26
+my_palette <- qualitative_hcl(26, palette = "Dark 3")  
+
+```
+
+
+
+```{r VisualizingTheSuperpopData PNG}
+
+#Extracting superpopulation name and their corresponding scaled telomeric reads columns to a new dataframe - "superpop_data"
+
+superpop_data <- telo_data[, c("Superpopulation.name", "ScaledTelomericReads")]
+
+# Converting columns to appropriate data types
+superpop_data$ScaledTelomericReads <- as.numeric(superpop_data$ScaledTelomericReads)
+
+# Remove rows with scaled telomeric reads equal to 0
+superpop_data <- superpop_data[superpop_data$ScaledTelomericReads > 0, ]
+
+# Create a box and whisker plot using ggplot2 and colorspace
+superpop5 <- ggplot(superpop_data, aes(x = Superpopulation.name, y = ScaledTelomericReads, fill = Superpopulation.name)) +
+  geom_boxplot() +
+  scale_fill_discrete_qualitative(palette = "Dark3") +
+  guides(fill = "none") +
+  theme_minimal() +
+  labs(x = "Superpopulations", y = "Average Telomere Content", face = "bold", size = 24) +
+  theme(
+    axis.text.x = element_text(size = 12, face = "bold"),  # Adjust the font size for x-axis labels
+    axis.text.y = element_text(size = 18),  # Adjust the font size for y-axis labels
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+
+ggsave("telomere_superpop_5.png", plot = superpop5, width = 10, height = 8, dpi = 300)
+
+```
+
+
+
+```{r VisualizingTheSuperpopData LEGEND}
+
+#Extracting superpopulation name and their corresponding scaled telomeric reads columns to a new dataframe - "superpop_data"
+
+superpop_data <- telo_data[, c("Superpopulation.name", "ScaledTelomericReads")]
+
+# Converting columns to appropriate data types
+superpop_data$ScaledTelomericReads <- as.numeric(superpop_data$ScaledTelomericReads)
+
+# Remove rows with scaled telomeric reads equal to 0
+superpop_data <- superpop_data[superpop_data$ScaledTelomericReads > 0, ]
+
+# Create a box and whisker plot using ggplot2 and colorspace
+ggplot(superpop_data, aes(x = Superpopulation.name, y = ScaledTelomericReads, fill = Superpopulation.name)) +
+  geom_boxplot() +
+  scale_fill_discrete_qualitative(palette = "Dark3") +
+  theme_minimal() +
+  labs(title = "Telomeric Reads by Superpopulations", x = "Superpopulations", y = "Average Telomeric Reads", face = "bold", size = 24) +
+  theme(
+    axis.text.x = element_text(size = 16),  # Adjust the font size for x-axis labels
+    axis.text.y = element_text(size = 18),  # Adjust the font size for y-axis labels
+    legend.text = element_text(size = 16),
+    legend.position.inside = c(0.85, 0.99),  # Adjust the legend position (x, y)
+    legend.justification = c(1, 1)  # Adjust the legend justification (1, 1 for upper-right corner)
+  )
+
+
+```
+
+
+```{r PlottingAllThePop PNG}
+allpop <- ggplot(telo_data, aes(x = Population, y = ScaledTelomericReads, fill = Population)) +
+  geom_boxplot() +
+  labs(x = "Populations",face = "bold",
+    y = "Average Telomere Content", face = "bold"
+  ) +
+  theme_minimal() +
+  scale_fill_manual(values = my_palette) +
+  guides(fill = "none") +
+  theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    axis.text.x = element_text(size = 10, face = "bold"),  # Adjust the font size for x-axis labels
+    axis.text.y = element_text(size = 18)  # Adjust the font size for y-axis labels
+  )
+
+ggsave("telomere_allpop_plot.png", plot = allpop , width = 10, height = 8, dpi = 300)
+
+```
+
+
+
+
+```{r PlottingAllThePop LEGEND}
+ggplot(telo_data, aes(x = Population, y = ScaledTelomericReads, fill = Population)) +
+  geom_boxplot() +
+  labs(
+    title = "Average Telomeric Reads across Twenty-six Global Human Populations",
+    x = "Populations",
+    y = "Average Telomeric Reads", face = "bold"
+  ) +
+  theme_minimal() +
+  scale_fill_manual(values = my_palette) +
+  guides(fill = guide_legend(title = "Populations", override.aes = list(fill = my_palette))) +
+  theme(
+    axis.text.x = element_text(size = 16),  # Adjust the font size for x-axis labels
+    axis.text.y = element_text(size = 18),  # Adjust the font size for y-axis labels
+    legend.text = element_text(size = 18),
+    legend.position = c(0.99, 1,05),  # Adjust the legend position (x, y)
+    legend.justification = c(1, 1)  # Adjust the legend justification (1, 1 for upper-right corner)
+  )
+
+```
+
+
+
+```{r ExtractingPopulation-wiseData}
+
+# Extract Telomeric reads data for all twenty-six Populations 
+
+acb_pop <- telo_data %>% filter(Population == "ACB")
+asw_pop <- telo_data %>% filter(Population == "ASW")
+beb_pop <- telo_data %>% filter(Population == "BEB")
+cdx_pop <- telo_data %>% filter(Population == "CDX")
+ceu_pop <- telo_data %>% filter(Population == "CEU")
+chb_pop <- telo_data %>% filter(Population == "CHB")
+chs_pop <- telo_data %>% filter(Population == "CHS")
+clm_pop <- telo_data %>% filter(Population == "CLM")
+esn_pop <- telo_data %>% filter(Population == "ESN")
+fin_pop <- telo_data %>% filter(Population == "FIN")
+gbr_pop <- telo_data %>% filter(Population == "GBR")
+gih_pop <- telo_data %>% filter(Population == "GIH")
+gwd_pop <- telo_data %>% filter(Population == "GWD")
+ibs_pop <- telo_data %>% filter(Population == "IBS")
+itu_pop <- telo_data %>% filter(Population == "ITU")
+jpt_pop <- telo_data %>% filter(Population == "JPT")
+khv_pop <- telo_data %>% filter(Population == "KHV")
+lwk_pop <- telo_data %>% filter(Population == "LWK")
+msl_pop <- telo_data %>% filter(Population == "MSL")
+mxl_pop <- telo_data %>% filter(Population == "MXL")
+pel_pop <- telo_data %>% filter(Population == "PEL")
+pjl_pop <- telo_data %>% filter(Population == "PJL")
+pur_pop <- telo_data %>% filter(Population == "PUR")
+stu_pop <- telo_data %>% filter(Population == "STU")
+tsi_pop <- telo_data %>% filter(Population == "TSI")
+yri_pop <- telo_data %>% filter(Population == "YRI")
+
+
+telo_acb <- acb_pop$ScaledTelomericReads
+telo_asw <- asw_pop$ScaledTelomericReads
+telo_beb <- beb_pop$ScaledTelomericReads
+telo_cdx <- cdx_pop$ScaledTelomericReads
+telo_ceu <- ceu_pop$ScaledTelomericReads
+telo_chb <- chb_pop$ScaledTelomericReads
+telo_chs <- chs_pop$ScaledTelomericReads
+telo_clm <- clm_pop$ScaledTelomericReads
+telo_esn <- esn_pop$ScaledTelomericReads
+telo_fin <- fin_pop$ScaledTelomericReads
+telo_gbr <- gbr_pop$ScaledTelomericReads
+telo_gih <- gih_pop$ScaledTelomericReads
+telo_gwd <- gwd_pop$ScaledTelomericReads
+telo_ibs <- ibs_pop$ScaledTelomericReads
+telo_itu <- itu_pop$ScaledTelomericReads
+telo_jpt <- jpt_pop$ScaledTelomericReads
+telo_khv <- khv_pop$ScaledTelomericReads
+telo_lwk <- lwk_pop$ScaledTelomericReads
+telo_msl <- msl_pop$ScaledTelomericReads
+telo_mxl <- mxl_pop$ScaledTelomericReads
+telo_pel <- pel_pop$ScaledTelomericReads
+telo_pjl <- pjl_pop$ScaledTelomericReads
+telo_pur <- pur_pop$ScaledTelomericReads
+telo_stu <- stu_pop$ScaledTelomericReads
+telo_tsi <- tsi_pop$ScaledTelomericReads
+telo_yri <- yri_pop$ScaledTelomericReads
+
+```
+
+
+
+
+```{r SubsetGenderData}
+#Created subsets of male and female data for all the populations (52 total subsets)
+#All the populations are extracted using their population code
+
+acb_male <- telo_data %>%  filter((Population == "ACB") & (Gender == "male"))
+
+acb_female <- telo_data %>%  filter((Population == "ACB") & (Gender == "female"))
+
+asw_male <- telo_data %>%  filter((Population == "ASW") & (Gender == "male"))
+
+asw_female <- telo_data %>%  filter((Population == "ASW") & (Gender == "female"))
+
+beb_male <- telo_data %>%  filter((Population == "BEB") & (Gender == "male"))
+
+beb_female <- telo_data %>%  filter((Population == "BEB") & (Gender == "female"))
+
+cdx_male <- telo_data %>% filter((Population == "CDX" ) & (Gender == "male"))
+
+cdx_female <- telo_data %>% filter((Population == "CDX" ) & (Gender == "female"))
+
+ceu_male <- telo_data %>% filter((Population == "CEU" ) & (Gender == "male"))
+
+ceu_female <- telo_data %>% filter((Population == "CEU" ) & (Gender == "female"))
+
+chb_male <- telo_data %>% filter((Population == "CHB" ) & (Gender == "male"))
+
+chb_female <- telo_data %>% filter((Population == "CHB" ) & (Gender == "female"))
+
+chs_male <- telo_data %>% filter((Population == "CHS" ) & (Gender == "male"))
+
+chs_female <- telo_data %>% filter((Population == "CHS" ) & (Gender == "female"))
+
+clm_male <- telo_data %>% filter((Population == "CLM" ) & (Gender == "male"))
+
+clm_female <- telo_data %>% filter((Population == "CLM" ) & (Gender == "female"))
+
+esn_male <- telo_data %>%  filter((Population == "ESN") & (Gender == "male"))
+
+esn_female <- telo_data %>%  filter((Population == "ESN") & (Gender == "female"))
+
+fin_male <- telo_data %>% filter((Population == "FIN" ) & (Gender == "male"))
+#View(fin_male)
+
+fin_female <- telo_data %>% filter((Population == "FIN" ) & (Gender == "female"))
+#View(fin_female)
+
+gbr_male <- telo_data %>% filter((Population == "GBR" ) & (Gender == "male"))
+#View(gbr_male)
+
+gbr_female <- telo_data %>% filter((Population == "GBR" ) & (Gender == "female"))
+#View(gbr_female)
+
+gih_male <- telo_data %>%  filter((Population == "GIH") & (Gender == "male"))
+
+gih_female <- telo_data %>%  filter((Population == "GIH") & (Gender == "female"))
+
+gwd_male <- telo_data %>% filter((Population == "GWD" ) & (Gender == "male"))
+
+gwd_female <- telo_data %>% filter((Population == "GWD" ) & (Gender == "female"))
+
+ibs_male <- telo_data %>% filter((Population == "IBS" ) & (Gender == "male"))
+
+ibs_female <- telo_data %>% filter((Population == "IBS" ) & (Gender == "female"))
+
+itu_male <- telo_data %>% filter((Population == "ITU" ) & (Gender == "male"))
+
+itu_female <- telo_data %>% filter((Population == "ITU" ) & (Gender == "female"))
+
+jpt_male <- telo_data %>% filter((Population == "JPT" ) & (Gender == "male"))
+
+jpt_female <- telo_data %>% filter((Population == "JPT" ) & (Gender == "female"))
+
+khv_male <- telo_data %>%  filter((Population == "KHV") & (Gender == "male"))
+
+khv_female <- telo_data %>%  filter((Population == "KHV") & (Gender == "female"))
+
+lwk_male <- telo_data %>% filter((Population == "LWK" ) & (Gender == "male"))
+
+lwk_female <- telo_data %>% filter((Population == "LWK" ) & (Gender == "female"))
+
+msl_male <- telo_data %>%  filter((Population == "MSL") & (Gender == "male"))
+
+msl_female <- telo_data %>%  filter((Population == "MSL") & (Gender == "female"))
+
+mxl_male <- telo_data %>% filter((Population == "MXL" ) & (Gender == "male"))
+
+mxl_female <- telo_data %>% filter((Population == "MXL" ) & (Gender == "female"))
+
+pel_male <- telo_data %>% filter((Population == "PEL" ) & (Gender == "male"))
+
+pel_female <- telo_data %>% filter((Population == "PEL" ) & (Gender == "female"))
+
+pjl_male <- telo_data %>%  filter((Population == "PJL") & (Gender == "male"))
+
+pjl_female <- telo_data %>%  filter((Population == "PJL") & (Gender == "female"))
+
+pur_male <- telo_data %>% filter((Population == "PUR" ) & (Gender == "male"))
+
+pur_female <- telo_data %>% filter((Population == "PUR" ) & (Gender == "female"))
+
+stu_male <- telo_data %>% filter((Population == "STU") & (Gender == "male"))
+
+stu_female <- telo_data %>% filter((Population == "STU") & (Gender == "female"))
+
+tsi_male <- telo_data %>%  filter((Population == "TSI") & (Gender == "male"))
+
+tsi_female <- telo_data %>%  filter((Population == "TSI") & (Gender == "female"))
+
+yri_male <- telo_data %>% filter((Population == "YRI" ) & (Gender == "male"))
+
+yri_female <- telo_data %>% filter((Population == "YRI" ) & (Gender == "female"))
+
+
+```
+
+
+```{r Allfemale vs Allmale comparison}
+telo_female <- telo_data %>% filter(Gender == "female")
+#View(telo_female)
+telo_male <- telo_data %>% filter(Gender == "male")
+
+```
+
+
+
+```{r BetweenGendersPopulations PNG}
+overallgender <- ggplot() +
+  geom_boxplot(data = telo_female, aes(y = ScaledTelomericReads , x = "Female", fill = "Female"), width = 0.5) +
+  geom_boxplot(data = telo_male, aes(y = ScaledTelomericReads, x = "Male", fill = "Male"), width = 0.5) +
+  labs(x = "Gender", y = "Average Telomere Content", face = "bold") +
+  theme_minimal() +
+  scale_fill_manual(values = c("Female" = "lightseagreen", "Male" = "lightpink2")) +
+  guides(fill = "none")+
+  theme(axis.text.x = element_text(size = 14, face = "bold"),  # Adjust the font size for x-axis labels
+    axis.text.y = element_text(size = 14, face = "bold"),  # Adjust the font size for y-axis labels
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+
+ggsave("telomere_overall_gender.png", plot = overallgender, width = 10, height = 8, dpi = 300)
+
+
+```
+
+
+```{r BetweenGendersPopulations LEGEND}
+ggplot() +
+  geom_boxplot(data = telo_female, aes(y = ScaledTelomericReads , x = "Female", fill = "Female"), width = 0.5) +
+  geom_boxplot(data = telo_male, aes(y = ScaledTelomericReads, x = "Male", fill = "Male"), width = 0.5) +
+  labs(title = "Overall Average Telomeric Reads between Female and Male",x = "Gender", y = "Average Telomeric Reads", face = "bold") +
+  theme_minimal() +
+  scale_fill_manual(values = c("Female" = "lightseagreen", "Male" = "lightpink2")) +
+  guides(fill = guide_legend(title = "Gender", override.aes = list(fill = c("lightseagreen", "lightpink2")))
+) + theme(axis.text.x = element_text(size = 14, face = "bold"),  # Adjust the font size for x-axis labels
+      axis.text.y = element_text(size = 14, face = "bold"),  # Adjust the font size for y-axis labels
+      legend.position = c(0.95, 0.95),  # Adjust the legend position (x, y)
+      legend.justification = c(1, 1),   # Adjust the legend justification (1, 1 for upper-right corner)
+ panel.border = element_rect(color = "black", fill = NA, size = 1)
+)
+
+```
+
+
+```{r PlottingtheSubsets}
+# Defining my custom color palette using colorspace
+population_colors <- qualitative_hcl(52, palette = "Dark 3")
+
+# Created a named vector for the populations
+population_names <- c(
+  "ACB Male", "ACB Female", "ASW Male", "ASW Female", "BEB Male", "BEB Female", "CDX Male", "CDX Female", 
+  "CEU Male", "CEU Female", "CHB Male", "CHB Female", "CHS Male", "CHS Female", "CLM Male", "CLM Female", 
+  "ESN Male", "ESN Female", "FIN Male", "FIN Female", "GBR Male", "GBR Female", "GIH Male", "GIH Female",
+  "GWD Male", "GWD Female", "IBS Male", "IBS Female", "ITU Male", "ITU Female", "JPT Male", "JPT Female", 
+  "KHV Male", "KHV Female", "LWK Male", "LWK Female", "MSL Male", "MSL Female", "MXL Male", "MXL Female", 
+  "PEL Male", "PEL Female", "PJL Male", "PJL Female", "PUR Male", "PUR Female", "STU Male", "STU Female",
+  "TSI Male", "TSI Female", "YRI Male", "YRI Female"
+)
+
+# Create a named vector with my color palette
+color_mapping <- setNames(population_colors, population_names)
+
+
+```
+
+
+```{r Plottingthe52Subsets}
+
+subset_52 <- ggplot() +
+  geom_boxplot(data = acb_male, aes(y = ScaledTelomericReads, x = "ACB Male", fill = "ACB Male"), width = 0.5) +
+  geom_boxplot(data = acb_female, aes(y = ScaledTelomericReads, x = "ACB Female", fill = "ACB Female"), width = 0.5) +
+  geom_boxplot(data = asw_male, aes(y = ScaledTelomericReads, x = "ASW Male", fill = "ASW Male"), width = 0.5) +
+  geom_boxplot(data = asw_female, aes(y = ScaledTelomericReads, x = "ASW Female", fill = "ASW Female"), width = 0.5) +
+  geom_boxplot(data = beb_male, aes(y = ScaledTelomericReads, x = "BEB Male", fill = "BEB Male"), width = 0.5) +
+  geom_boxplot(data = beb_female, aes(y = ScaledTelomericReads, x = "BEB Female", fill = "BEB Female"), width = 0.5) +
+  geom_boxplot(data = cdx_male, aes(y = ScaledTelomericReads, x = "CDX Male", fill = "CDX Male"), width = 0.5) +
+  geom_boxplot(data = cdx_female, aes(y = ScaledTelomericReads, x = "CDX Female", fill = "CDX Female"), width = 0.5) +
+  geom_boxplot(data = ceu_male, aes(y = ScaledTelomericReads, x = "CEU Male", fill = "CEU Male"), width = 0.5) +
+  geom_boxplot(data = ceu_female, aes(y = ScaledTelomericReads, x = "CEU Female", fill = "CEU Female"), width = 0.5) +
+  geom_boxplot(data = chb_male, aes(y = ScaledTelomericReads, x = "CHB Male", fill = "CHB Male"), width = 0.5) +
+  geom_boxplot(data = chb_female, aes(y = ScaledTelomericReads, x = "CHB Female", fill = "CHB Female"), width = 0.5) +
+  geom_boxplot(data = chs_male, aes(y = ScaledTelomericReads, x = "CHS Male", fill = "CHS Male"), width = 0.5) +
+  geom_boxplot(data = chs_female, aes(y = ScaledTelomericReads, x = "CHS Female", fill = "CHS Female"), width = 0.5) +
+  geom_boxplot(data = clm_male, aes(y = ScaledTelomericReads, x = "CLM Male", fill = "CLM Male"), width = 0.5) +
+  geom_boxplot(data = clm_female, aes(y = ScaledTelomericReads, x = "CLM Female", fill = "CLM Female"), width = 0.5) +
+  geom_boxplot(data = esn_male, aes(y = ScaledTelomericReads, x = "ESN Male", fill = "ESN Male"), width = 0.5) +
+  geom_boxplot(data = esn_female, aes(y = ScaledTelomericReads, x = "ESN Female", fill = "ESN Female"), width = 0.5) +
+  geom_boxplot(data = fin_male, aes(y = ScaledTelomericReads, x = "FIN Male", fill = "FIN Male"), width = 0.5) +
+  geom_boxplot(data = fin_female, aes(y = ScaledTelomericReads, x = "FIN Female", fill = "FIN Female"), width = 0.5) +
+  geom_boxplot(data = gbr_male, aes(y = ScaledTelomericReads, x = "GBR Male", fill = "GBR Male"), width = 0.5) +
+  geom_boxplot(data = gbr_female, aes(y = ScaledTelomericReads, x = "GBR Female", fill = "GBR Female"), width = 0.5) +
+  geom_boxplot(data = gih_male, aes(y = ScaledTelomericReads, x = "GIH Male", fill = "GIH Male"), width = 0.5) +
+  geom_boxplot(data = gih_female, aes(y = ScaledTelomericReads, x = "GIH Female", fill = "GIH Female"), width = 0.5) +
+  geom_boxplot(data = gwd_male, aes(y = ScaledTelomericReads, x = "GWD Male", fill = "GWD Male"), width = 0.5) +
+  geom_boxplot(data = gwd_female, aes(y = ScaledTelomericReads, x = "GWD Female", fill = "GWD Female"), width = 0.5) +
+  geom_boxplot(data = ibs_male, aes(y = ScaledTelomericReads, x = "IBS Male", fill = "IBS Male"), width = 0.5) +
+  geom_boxplot(data = ibs_female, aes(y = ScaledTelomericReads, x = "IBS Female", fill = "IBS Female"), width = 0.5) +
+  geom_boxplot(data = itu_male, aes(y = ScaledTelomericReads, x = "ITU Male", fill = "ITU Male"), width = 0.5) +
+  geom_boxplot(data = itu_female, aes(y = ScaledTelomericReads, x = "ITU Female", fill = "ITU Female"), width = 0.5) +
+  geom_boxplot(data = jpt_male, aes(y = ScaledTelomericReads, x = "JPT Male", fill = "JPT Male"), width = 0.5) +
+  geom_boxplot(data = jpt_female, aes(y = ScaledTelomericReads, x = "JPT Female", fill = "JPT Female"), width = 0.5) +
+  geom_boxplot(data = khv_male, aes(y = ScaledTelomericReads, x = "KHV Male", fill = "KHV Male"), width = 0.5) +
+  geom_boxplot(data = khv_female, aes(y = ScaledTelomericReads, x = "KHV Female", fill = "KHV Female"), width = 0.5) +
+  geom_boxplot(data = lwk_male, aes(y = ScaledTelomericReads, x = "LWK Male", fill = "LWK Male"), width = 0.5) +
+  geom_boxplot(data = lwk_female, aes(y = ScaledTelomericReads, x = "LWK Female", fill = "LWK Female"), width = 0.5) +
+  geom_boxplot(data = msl_male, aes(y = ScaledTelomericReads, x = "MSL Male", fill = "MSL Male"), width = 0.5) +
+  geom_boxplot(data = msl_female, aes(y = ScaledTelomericReads, x = "MSL Female", fill = "MSL Female"), width = 0.5) +
+  geom_boxplot(data = mxl_male, aes(y = ScaledTelomericReads, x = "MXL Male", fill = "MXL Male"), width = 0.5) +
+  geom_boxplot(data = mxl_female, aes(y = ScaledTelomericReads, x = "MXL Female", fill = "MXL Female"), width = 0.5) +
+  geom_boxplot(data = pel_male, aes(y = ScaledTelomericReads, x = "PEL Male", fill = "PEL Male"), width = 0.5) +
+  geom_boxplot(data = pel_female, aes(y = ScaledTelomericReads, x = "PEL Female", fill = "PEL Female"), width = 0.5) +
+  geom_boxplot(data = pjl_male, aes(y = ScaledTelomericReads, x = "PJL Male", fill = "PJL Male"), width = 0.5) +
+  geom_boxplot(data = pjl_female, aes(y = ScaledTelomericReads, x = "PJL Female", fill = "PJL Female"), width = 0.5) +
+  geom_boxplot(data = pur_male, aes(y = ScaledTelomericReads, x = "PUR Male", fill = "PUR Male"), width = 0.5) +
+  geom_boxplot(data = pur_female, aes(y = ScaledTelomericReads, x = "PUR Female", fill = "PUR Female"), width = 0.5) +
+  geom_boxplot(data = stu_male, aes(y = ScaledTelomericReads, x = "STU Male", fill = "STU Male"), width = 0.5) +
+  geom_boxplot(data = stu_female, aes(y = ScaledTelomericReads, x = "STU Female", fill = "STU Female"), width = 0.5) +
+  geom_boxplot(data = tsi_male, aes(y = ScaledTelomericReads, x = "TSI Male", fill = "TSI Male"), width = 0.5) +
+  geom_boxplot(data = tsi_female, aes(y = ScaledTelomericReads, x = "TSI Female", fill = "TSI Female"), width = 0.5) +
+  geom_boxplot(data = yri_male, aes(y = ScaledTelomericReads, x = "YRI Male", fill = "YRI Male"), width = 0.5) +
+  geom_boxplot(data = yri_female, aes(y = ScaledTelomericReads, x = "YRI Female", fill = "YRI Female"), width = 0.5) +
+  labs(x = "Populations", y = "Average Telomere Content") +
+  theme_minimal() +
+  scale_fill_manual(values = color_mapping) +
+  guides(fill = "none") +
+  theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA),
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 8),  # Adjust the font size for x-axis labels
+    axis.text.y = element_text(size = 13) # Adjust the legend justification (1, 1 for upper-right corner)
+  )
+
+ggsave("telomere_subset_52_plot.png", plot = subset_52 , width = 10, height = 8, dpi = 300)
+```
+
+
+
+#Statistical Analysis begins from here
+
+
+```{r Statistical_tests}
+
+#Following tests were done to get the overview of the distribution and variability of telomere content 
+
+
+#summary statistics
+summary(telo_data)
+
+#Specific descriptive statistics
+mean(telo_data$ScaledTelomericReads)
+median(telo_data$ScaledTelomericReads)
+sd(telo_data$ScaledTelomericReads) #standard deviation
+range(telo_data$ScaledTelomericReads)
+
+```
+
+
+#Aim 1: Are there significant differences in telomeric content across diverse human populations?
+
+##Normality tests were done to see if the data follows a normal distribution using tests like Shapiro-Wilk test and  Kolmogorov-Smirnov test.
+
+```{r Normality Test- Shapiro}
+# Shapiro-Wilk test for all samples across all populations
+# H0: A sample comes from a normal distribution
+# H1: A sample DOES NOT come from a normal distribution
+
+shapiro.test(log(telo_data$ScaledTelomericReads)) #W = 0.9619, p-value < 2.2e-16
+
+#shapiro.test(telo_data$LogScaledTelomericReads)
+
+shapiro.test(telo_data$ScaledTelomericReads)
+
+# Since the p-value is less than 0.05 (p-value < 2.2e-16), we reject the H0. 
+```
+
+
+
+```{r Normality Test- Kolmogorov-Smirnov}
+#Since Shapiro-Wilk is suitable for smaller sample size and we are working with larger sample size, oped for one-sample Kolmogorov-Smirnov test
+
+#H0: The sample comes from the specified (e.g. normal) distribution. 
+#H1: The sample DOES NOT come from a normal distribution
+
+ks.test(telo_data$ScaledTelomericReads, "pnorm", mean=mean(telo_data$ScaledTelomericReads), sd= sd(telo_data$ScaledTelomericReads))
+
+ks.test(log(telo_data$ScaledTelomericReads), "pnorm", 
+        mean = mean(log(telo_data$ScaledTelomericReads)), 
+        sd = sd(log(telo_data$ScaledTelomericReads)))
+
+
+```
+
+
+```{r histogram}
+#Checking out the distribution
+hist(log(telo_data$ScaledTelomericReads))
+
+```
+
+
+
+```{r qq-plot}
+qqnorm(log(telo_data$ScaledTelomericReads))
+qqline(log(telo_data$ScaledTelomericReads), col = "royalblue")
+
+#the points are generally close to the line in the middle portion, which suggests that the central values of the data roughly follow a normal distribution. However, there is some deviation at both ends (tails) of the plot, where the points diverge from the line. This suggests that the data has heavier tails than a normal distribution, meaning there may be more extreme values than expected under normality.
+#Overall, while the data is approximately normal, there are deviations in the tails, indicating some skewness or kurtosis. You might still consider it reasonably normal for certain analyses
+
+#Since the data is reasonably normally distributed, we used the parametric tests for our analyses.
+```
+
+```{r checking HOV- Levene's Test}
+
+# Checking for Homogeneity of variance before doing an ANOVA, since it's an assumption with one -way ANOVA.
+
+# H0: The population variances are equal
+# H1: The population variances are not equal
+# Reject the null hypothesis: If the p-value is less than a significance level of 0.05
+
+telo_data$Population <- as.factor(telo_data$Population)
+
+leveneTest(log(ScaledTelomericReads) ~ Population, data = telo_data)
+
+#Since the p-value is much less than 0.05, Levene’s test suggests that the assumption of homogeneity of variance is violated. This means the variances across the groups (populations) are significantly different.
+```
+# Since the homogeneity of variances assumption is violated, we considered using a one-way WELCH ANOVA test when doing multiple group comparison
+```{r one-way Welch ANOVA }
+#H0: There is no difference between the means of the populations
+#H1: There is at least one population mean that is different from the others. 
+
+# Welch ANOVA test
+welch_anova <- oneway.test(log(ScaledTelomericReads) ~ Population, data = telo_data, var.equal = FALSE)
+
+welch_anova
+
+# A higher F-value (22.629) generally indicates that there is more variation between the group means than within the groups.
+# df = number of groups (total populations minus one aka 25)
+# Since the p-value is significantly less then 0.05, we reject the H0 indicating that there are significant differences in the log-transformed telomeric reads among the populations. 
+```
+
+# Now to conduct post-hoc tests to identify which specific populations differ from each other, we did a Games - Howell test.
+```{r Post-hoc for Welch ANOVA - Games Howell}
+
+# Unequal variance and differing sample size 
+
+# H0: There is no difference in the mean values between the two groups.
+# H1: There is a difference in the mean values between the two groups. 
+
+telo_data$LogScaledTelomericReads <- log(telo_data$ScaledTelomericReads)
+
+games_howell_test(data = telo_data, LogScaledTelomericReads ~ Population, conf.level = 0.95, detailed = FALSE)
+
+```
+
+
+#Aim 2: Do the telomere content vary among different superpopulations?
+
+```{r Normality for superpop}
+
+qqnorm(log(superpop_data$ScaledTelomericReads))
+qqline(log(superpop_data$ScaledTelomericReads), col = "royalblue")
+
+```
+
+
+```{r checking HOV in SUPERPOP-Levene's Test}
+
+# Checking for Homogeneity of variance before doing an ANOVA, since it's an assumption with one -way ANOVA.
+
+# H0: The superpopulation variances are equal
+# H1: The superpopulation variances are not equal
+# Reject the null hypothesis: If the p-value is less than a significance level of 0.05
+
+superpop_data$Superpopulation.name <- as.factor(superpop_data$Superpopulation.name)
+
+leveneTest(log(ScaledTelomericReads) ~ Superpopulation.name, data = superpop_data)
+
+#Since the p-value is much less than 0.05, Levene’s test suggests that the assumption of homogeneity of variance is violated. This means the variances across the superpopulations are significantly different.
+```
+# Since the homogeneity of variances assumption is violated, we considered using a one-way WELCH ANOVA test when doing multiple group comparison
+```{r one-way Welch ANOVA }
+#H0: There is no difference between the means of the superpopulations
+#H1: There is at least one superpopulation mean that is different from the others. 
+
+# Welch ANOVA test
+welch_anova_super <- oneway.test(log(ScaledTelomericReads) ~ Superpopulation.name, data = superpop_data, var.equal = FALSE)
+
+welch_anova_super
+
+# A higher F-value (23.191) generally indicates that there is more variation between the group means than within the groups.
+# df = number of groups (total superpopulations minus one aka 4)
+# Since the p-value is significantly less then 0.05, we reject the H0 indicating that there are significant differences in the log-transformed telomeric reads among the populations. 
+```
+# Now to conduct post-hoc tests to identify which specific superpopulations differ from each other, we did a Games - Howell test.
+```{r Post-hoc for Welch ANOVA - Games Howell}
+
+superpop_data$LogScaledTelomericReads <- log(superpop_data$ScaledTelomericReads)
+
+games_howell_test(data = superpop_data, LogScaledTelomericReads ~ Superpopulation.name, conf.level = 0.95, detailed = FALSE)
+
+```
+
+#Aim 3&4: do the telomere content vary between self-reported sexes within and across populations
+
+```{r checking HOV in OVERALL genderwise comparison-Levene's Test}
+
+# Checking for Homogeneity of variance before doing an ANOVA, since it's an assumption with one -way ANOVA.
+
+# H0: The gender variances are equal
+# H1: The gender variances are not equal
+# Reject the null hypothesis: If the p-value is less than a significance level of 0.05
+
+telo_data$Gender <- as.factor(telo_data$Gender)
+
+leveneTest(log(ScaledTelomericReads) ~ Gender, data = telo_data)
+
+#Since the p-value (0.05821) is greater than 0.05, we do not have strong evidence to reject the null hypothesis of equal variances at the 0.05 significance level. This suggests that the variances between the two groups are not significantly different, meaning that the assumption of homogeneity of variances holds reasonably well for this data, though it is close to the threshold.
+```
+
+```{r OVERALL genderwise diff- Welch's t-test}
+# H0: There is no difference in the means of the two groups.
+# H1: There is difference in the means of the two groups.
+
+
+t.test(log(ScaledTelomericReads) ~ Gender, data = telo_data, var.equal = FALSE)
+
+# Since the p-value (0.2744) is greater than 0.05, you fail to reject the null hypothesis. This suggests that there is no statistically significant difference in the mean log-transformed telomeric reads between males and females.
+```
+```{r Genderwise diff - within Pop}
+# Initialize an empty list to store p-values
+results <- list()
+
+# Loop through each unique population
+for (pop in unique(telo_data$Population)) {
+  # Subset the data for the current population
+  pop_data <- subset(telo_data, Population == pop)
+  
+  # Perform Welch's t-test on the log-transformed ScaledTelomericReads between genders
+  # The test compares the means between genders (e.g., male vs. female) within the current population.
+  test_result <- t.test(log(ScaledTelomericReads) ~ Gender, data = pop_data, var.equal = FALSE)
+  
+  # Store the p-value in the results list
+  results[[pop]] <- test_result$p.value
+}
+
+# View raw p-values for each population
+results
+
+# Convert results to a vector and apply Bonferroni correction
+adjusted_pvalues_bonferroni <- p.adjust(unlist(results), method = "bonferroni")
+
+# Apply FDR correction (False Discovery Rate)
+adjusted_pvalues_fdr <- p.adjust(unlist(results), method = "fdr")
+
+# View adjusted p-values
+adjusted_pvalues_bonferroni
+adjusted_pvalues_fdr
+
+```
