@@ -1,6 +1,6 @@
 # TeloTales: Telomere Content Analysis Pipeline
 
-This repository contains scripts and instructions for downloading BAM files from Phase 3 of the 1000 Genomes Project, analyzing telomere content using qmotif, and saving output files with telomere data. Each step in the pipeline is outlined below, along with requirements and execution instructions.
+This repository contains scripts and instructions for downloading BAM files from Phase 3 of the 1000 Genomes Project, analyzing telomere content using qmotif, and saving output files with telomere data. Each step in the pipeline is outlined below, along with requirements and execution instructions. Happy Telomere Treasure Hunt!
 
 We utilized [NCBI’s 1000 Genomes Project server](https://www.ncbi.nlm.nih.gov/projects/faspftp/1000genomes/).
 
@@ -18,7 +18,7 @@ To run this pipeline, you'll need:
 * **Java**: Required to run qmotif
 
 Additional files to prepare:
-* `files_list.txt`: Contains URLs of BAM and corresponding BAI index files from the 1000 Genomes Project
+* `files_list.txt`: Contains URLs of BAM and corresponding BAI (BAM index) files from the 1000 Genomes Project
 * `chrnames`: Contains chromosome names for tallying telomeric reads
 
 ## File Descriptions
@@ -103,4 +103,4 @@ bash scaledgenomic.sh
 
 
 ## Contact
-* If you’d like to discuss this project or get in touch for other inquiries, please email me at priyanshishah213@gmail.com or connect with me on [LinkedIn](https://www.linkedin.com/in/priyanshi-p-shah/). Happy Telomere Treasure Hunt!
+* If you’d like to discuss this project or get in touch for other inquiries, please email me at priyanshishah213@gmail.com or connect with me on [LinkedIn](https://www.linkedin.com/in/priyanshi-p-shah/). 
