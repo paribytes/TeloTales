@@ -18,6 +18,8 @@ To run this pipeline, you'll need:
 * **Java**: Required to run qmotif
 * **qmotif**: Download and install qmotif ([Documentation here](https://adamajava.readthedocs.io/en/latest/qmotif/qmotif_1_0/))
 
+![](telotales.png)
+
 Additional files to prepare:
 * `files_list.txt`: Contains URLs of BAM and corresponding BAI (BAM index) files from the 1000 Genomes Project
 * `chrnames`: Contains chromosome names for tallying telomeric reads
