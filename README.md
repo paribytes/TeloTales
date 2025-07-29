@@ -18,7 +18,7 @@ To run this pipeline, you'll need:
 * **Java**: Required to run qmotif
 * **qmotif**: Download and install qmotif ([Documentation here](https://adamajava.readthedocs.io/en/latest/qmotif/qmotif_1_0/))
 
-![qmotif workflow plot](supplementary%20data/telotales.png)
+<!-- ![qmotif workflow plot](supplementary%20data/telotales.png) -->
 
 <img src="supplementary_data/telotales.png" alt="Telotales plot" width="400"/>
 
