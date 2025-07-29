@@ -20,7 +20,10 @@ To run this pipeline, you'll need:
 
 <!-- ![qmotif workflow plot](supplementary%20data/telotales.png) -->
 
-<img src="supplementary%20data/telotales.png" alt="Telotales plot" width="400"/>
+<img src="supplementary%20data/telotales.png" alt="Telotales plot" width="600"/>
+
+Supplementary Figure 1. Workflow for Telomere Content Variation Pipeline.
+Schematic representation of the qmotif-based pipeline used to estimate telomere content variation across samples from Phase 3 of the 1000 Genomes Project. The workflow involves extracting and quantifying telomeric reads from whole-genome sequencing data using qmotif v1.0. The tool operates through a two-stage matching system: in Stage 1, a simple string match is used to identify canonical telomeric repeats, while in Stage 2, a more complex regular expression is applied to detect variant telomeric sequences. At the end of Stage 2, a tally of all identified motifs is done, and the final number is recorded. [Figure created with BioRender.com].
 
 Additional files to prepare:
 * `files_list.txt`: Contains URLs of BAM and corresponding BAI (BAM index) files from the 1000 Genomes Project
