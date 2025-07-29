@@ -20,7 +20,7 @@ To run this pipeline, you'll need:
 
 <!-- ![qmotif workflow plot](supplementary%20data/telotales.png) -->
 
-<img src="supplementary%data/telotales.png" alt="Telotales plot" width="400"/>
+<img src="supplementary%20data/telotales.png" alt="Telotales plot" width="400"/>
 
 Additional files to prepare:
 * `files_list.txt`: Contains URLs of BAM and corresponding BAI (BAM index) files from the 1000 Genomes Project
