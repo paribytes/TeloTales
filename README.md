@@ -14,8 +14,9 @@ We utilized [NCBI’s 1000 Genomes Project server](https://www.ncbi.nlm.nih.gov/
 
 ## Requirements
 To run this pipeline, you'll need:
-* **qmotif**: Download and install qmotif ([Documentation here](https://adamajava.readthedocs.io/en/latest/qmotif/qmotif_1_0/))
+
 * **Java**: Required to run qmotif
+* **qmotif**: Download and install qmotif ([Documentation here](https://adamajava.readthedocs.io/en/latest/qmotif/qmotif_1_0/))
 
 Additional files to prepare:
 * `files_list.txt`: Contains URLs of BAM and corresponding BAI (BAM index) files from the 1000 Genomes Project
