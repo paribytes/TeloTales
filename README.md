@@ -10,6 +10,7 @@ We utilized [NCBI’s 1000 Genomes Project server](https://www.ncbi.nlm.nih.gov/
 * [Usage](#usage)
 * [Detailed Steps](#detailed-steps)
 * [Outputs](#outputs)
+* [Citation](#citation)
 * [Contact](#contact)
 
 ## Requirements
@@ -112,6 +113,13 @@ bash scaledgenomic.sh
 
 ## Help
 * There are example output files generated from all the scripts in the "supplementary data" folder. 
+
+## Citation
+* If you use TeloTales, please cite our [paper](https://www.biorxiv.org/content/10.1101/2025.11.03.686324v1)
+```
+Shah, P., & Sethuraman, A. (2025). A Comprehensive Catalog of Telomere Content Variation across Human Populations. https://doi.org/10.1101/2025.11.03.686324 
+
+```
 
 ## Contact
 * If you’d like to discuss this project or get in touch for other inquiries, please email me at priyanshishah213@gmail.com or connect with me on [LinkedIn](https://www.linkedin.com/in/priyanshi-p-shah/). 
