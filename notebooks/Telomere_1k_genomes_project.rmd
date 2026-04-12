@@ -1,9 +1,12 @@
 ---
 title: "Telomere Content Analysis in the 1000 Genomes Project""
 author: "Priyanshi Shah"
-date: "2023-10-29"
 output: html_document
 ---
+
+## Overview: This analysis investigates variation in telomere content across global populations using whole-genome sequencing data from the 1000 Genomes Project. Telomere content was estimated using qmotif-derived metrics and analyzed across populations, superpopulations, and sex.
+
+## Setup
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -16,44 +19,25 @@ library(conover.test)
 library(rstatix)
 ```
 
+## Data Loading
 
-```{r setup, include=FALSE}
-#library(tidyverse)
-#library(ggpubr)
-#library(rstatix)
+```{r loading data}
 
-```
+telo_data <- read.csv("data/processed/1k_genome_project_analysis_csv.csv")
 
+# Remove missing values
+telo_data <- telo_data %>%
+  filter(!is.na(ScaledTelomericReads))
 
+# Clean labels
+telo_data$Superpopulation <- trimws(telo_data$Superpopulation.name)
 
-```{r loadingData}
-## Overview: This analysis investigates variation in telomere content across global populations using whole-genome sequencing data from the 1000 Genomes Project. Telomere content was estimated using qmotif-derived metrics and analyzed across populations, superpopulations, and sex.
-
-
-telo_data <- read.csv("data/processed/1k_genome_project_analysis_csv.csv", header = TRUE, row.names = NULL)
-head(telo_data) # Inspect dataset structure
-
-```
-
-
-
-```{r EliminatingMissingData}
-#If the row has missing data for ScaledTelomericReads, then the code below will remove that row in the updated "telo_data" dataframe.
-
-telo_data <- telo_data %>% filter(!is.na(ScaledTelomericReads))
-```
-
-
-
-```{r SubsetDataframes}
-#Create a subset containing superpopulation and telomere content to a new dataframe - "superpop_data"
-superpop_data <- telo_data[, c("Superpopulation.name", "ScaledTelomericReads")]
-
-# Remove leading/trailing whitespace in population labels
-telo_data$Superpopulation.name <- trimws(telo_data$Superpopulation.name)
-
-# Listing unique values in the Superpopulation.name column to ensure all is well (should be getting 5 superpopulations)
+# Sanity Check (should be getting 5 superpopulations)
 unique(telo_data$Superpopulation.name)
+
+# Convert to factors
+telo_data$Population <- as.factor(telo_data$Population)
+telo_data$Gender <- as.factor(telo_data$Gender)
 
 ```
 
