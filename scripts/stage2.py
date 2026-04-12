@@ -11,13 +11,9 @@ for file in files:
         # Extracting just the sequence name from the file
         sequence_name = file.replace("_log.txt", "")
         
-        # Define the grep command using the sequence name
-        # This extracts the chromosome number and the final telomere read counts each chromosome has after stage2 and stores that information in a file {sequence_name}_stage2_coverage.txt.
+        # Extract the chromosome-level telomere coverage after stage2 and store that information in a file {sequence_name}_stage2_coverage.txt.
         grep_command = f"grep 'GENOMIC' {file} | awk '{{split($6, arr, \":\"); print arr[1]\"\\t\"$18}}' | sed 's/,/\t/g' > {sequence_name}_stage2_coverage.txt"
         
         # Execute the grep command
         subprocess.run(grep_command, shell=True)
-
-
-
 
