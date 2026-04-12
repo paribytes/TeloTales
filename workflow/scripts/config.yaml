@@ -1,0 +1,9 @@
+input_dir: "data/"
+output_dir: "results/"
+
+samples:
+  - NA18861
+  - NA18864
+  - NA18865
+
+chromosomes_file: "chrnames.txt"
