@@ -4,7 +4,7 @@
 
 #Since the base URL is the same for all files, I made the base URL a bash variable. All the file paths are stored in the "files_list.txt" file.
 
-bash_url="https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/phase3/data"
+base_url="https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/phase3/data"
 
 #ensuring that the entire line is read as a whole so the link can work
 #file_path variable stores the content of each line from files_list.txt file
