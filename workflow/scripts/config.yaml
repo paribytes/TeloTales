@@ -1,9 +1,11 @@
-input_dir: "data/"
+input_dir: "data/bam/"
 output_dir: "results/"
 
 samples:
   - NA18861
   - NA18864
   - NA18865
+
+ftp_base: "https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/phase3/data"
 
 chromosomes_file: "workflow/scripts/chrnames.txt"
