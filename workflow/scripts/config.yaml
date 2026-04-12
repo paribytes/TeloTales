@@ -1,5 +1,5 @@
-input_dir: "data/bam/"
-output_dir: "results/"
+input_dir: "data/bam"
+output_dir: "results"
 
 samples:
   - NA18861
