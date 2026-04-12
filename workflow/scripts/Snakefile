@@ -21,18 +21,16 @@ rule all:
 # 1. DOWNLOAD BAM FILES
 # =========================================================
 rule download_bam:
+    input:
+        "files_list.txt"
     output:
-        f"{BAMDIR}/{{sample}}.bam"
-    params:
-        ftp = FTP
+        expand("data/bam/{sample}.bam", sample=SAMPLES)
     shell:
         """
-        mkdir -p {BAMDIR}
-
-        wget {params.ftp}/{wildcards.sample}.bam \
-        -O {output}
+        while IFS= read -r file_path; do
+            wget -P data/bam https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/phase3/data/$file_path
+        done < {input}
         """
-
 
 # =========================================================
 # 2. RUN QMOTIF
