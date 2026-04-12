@@ -2,7 +2,7 @@
 
 This repository presents a reproducible bioinformatics pipeline for estimating telomere content from whole-genome sequencing (WGS) data from the 1000 Genomes Project. The workflow includes automated retrieval of BAM/BAI files, extraction of telomeric repeat signals using qmotif, and downstream analysis of telomere content across samples.
 
-Data are accessed directly from the 1000 Genomes Project via NCBI, and are not stored within this repository.
+Data are accessed directly from the [1000 Genomes Project via NCBI](https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/phase3/data/), and are not stored within this repository.
 
 ## Table of Contents
 * [Requirements](#requirements)
