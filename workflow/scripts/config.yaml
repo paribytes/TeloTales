@@ -6,4 +6,4 @@ samples:
   - NA18864
   - NA18865
 
-chromosomes_file: "chrnames.txt"
+chromosomes_file: "workflow/scripts/chrnames.txt"
