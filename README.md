@@ -1,6 +1,8 @@
 # TeloTales: Telomere Content Analysis Pipeline
 
-This repository contains scripts and instructions for downloading BAM files from Phase 3 of the 1000 Genomes Project, analyzing telomere content using qmotif, and saving output files with telomere data. Each step in the pipeline is outlined below, along with requirements and execution instructions. Happy Telomere Treasure Hunt!
+This repository presents a reproducible bioinformatics pipeline for estimating telomere content from whole-genome sequencing (WGS) data from the 1000 Genomes Project. The workflow includes automated retrieval of BAM/BAI files, extraction of telomeric repeat signals using qmotif, and downstream analysis of telomere content across samples.
+
+Data are accessed directly from the 1000 Genomes Project via NCBI, and are not stored within this repository.
 
 We utilized [NCBI’s 1000 Genomes Project server](https://www.ncbi.nlm.nih.gov/projects/faspftp/1000genomes/).
 
