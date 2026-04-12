@@ -1,15 +1,14 @@
 #!/bin/bash
 
-#This script (together with the "files_list.txt" file) will download WGS BAM files from Phase 3 of the 1000 Genomes Project by utilizing NCBI's site (https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/phase3/data/)
+# Download WGS BAM files from Phase 3 of the 1000 Genomes Project
+# Data source: https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/phase3/data/
 
-#Since the base URL is the same for all files, I made the base URL a bash variable. All the file paths are stored in the "files_list.txt" file.
+set -e  # stop if any command fails
 
 base_url="https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/phase3/data"
 
-#ensuring that the entire line is read as a whole so the link can work
-#file_path variable stores the content of each line from files_list.txt file
-#wget is used to download files from the web and then concatenate the entire file path
+input_file="files_list.txt"
 
 while IFS= read -r file_path; do
-    wget "${base_url}/${file_path}"
-done < files_list.txt
+    wget -nc "${base_url}/${file_path}"
+done < "${input_file}"
