@@ -10,6 +10,8 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
 library(colorspace)
 library(ggplot2)
 library(dplyr)
@@ -19,10 +21,9 @@ library(conover.test)
 library(rstatix)
 ```
 
-## Data Loading
+## Data Loading & Cleaning
 
-```{r loading data}
-
+```{r}
 telo_data <- read.csv("data/processed/1k_genome_project_analysis_csv.csv")
 
 # Remove missing values
@@ -32,12 +33,12 @@ telo_data <- telo_data %>%
 # Clean labels
 telo_data$Superpopulation <- trimws(telo_data$Superpopulation.name)
 
-# Sanity Check (should be getting 5 superpopulations)
-unique(telo_data$Superpopulation.name)
-
 # Convert to factors
 telo_data$Population <- as.factor(telo_data$Population)
 telo_data$Gender <- as.factor(telo_data$Gender)
+
+# Sanity Check (should be getting 5 superpopulations)
+unique(telo_data$Superpopulation.name)
 
 ```
 
