@@ -1,5 +1,5 @@
 ---
-title: "Telomere_1k_genomes_project"
+title: "Telomere Content Analysis in the 1000 Genomes Project""
 author: "Priyanshi Shah"
 date: "2023-10-29"
 output: html_document
@@ -27,35 +27,32 @@ library(rstatix)
 
 
 ```{r loadingData}
+## Overview: This analysis investigates variation in telomere content across global populations using whole-genome sequencing data from the 1000 Genomes Project. Telomere content was estimated using qmotif-derived metrics and analyzed across populations, superpopulations, and sex.
 
-#Setting the path to my working directory where the CSV file is
-setwd("~/Documents/FinalChapter1/Telomere_1kGP_qMotif_Files_PHASE3_Backup2")
 
-telo_data <- read.csv("1k_genome_project_analysis_csv.csv", header = TRUE, row.names = NULL)
-head(telo_data)
-View(telo_data) #Just checking out the data
+telo_data <- read.csv("data/processed/1k_genome_project_analysis_csv.csv", header = TRUE, row.names = NULL)
+head(telo_data) # Inspect dataset structure
 
 ```
 
 
 
 ```{r EliminatingMissingData}
-#If the row has missing data for ScaledTelomericReads, then below line of code will remove that row in the updated "telo_data" dataframe.
+#If the row has missing data for ScaledTelomericReads, then the code below will remove that row in the updated "telo_data" dataframe.
 
 telo_data <- telo_data %>% filter(!is.na(ScaledTelomericReads))
-#telo_data <- telo_data %>% filter(!is.na(LogScaledTelomericReads))
 ```
 
 
 
-```{r checkin for incosistencies}
-#created a dataframe named super_pop data from the main telo_data and extracting superpopulation name and their corresponding scaled telomeric reads columns to a new dataframe - "superpop_data"
+```{r SubsetDataframes}
+#Create a subset containing superpopulation and telomere content to a new dataframe - "superpop_data"
 superpop_data <- telo_data[, c("Superpopulation.name", "ScaledTelomericReads")]
 
-# Removing leading and trailing whitespace if any so i don't get "American Ancestry" and "American Ancestry " as different superpopulations 
+# Remove leading/trailing whitespace in population labels
 telo_data$Superpopulation.name <- trimws(telo_data$Superpopulation.name)
 
-# Listing unique values in the Superpopulation.name column to make sure all is well (should be getting 5 superpopulations)
+# Listing unique values in the Superpopulation.name column to ensure all is well (should be getting 5 superpopulations)
 unique(telo_data$Superpopulation.name)
 
 ```
