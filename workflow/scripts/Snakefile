@@ -1,0 +1,8 @@
+configfile: "config.yaml"
+
+SAMPLES = config["samples"]
+OUTDIR = config["output_dir"]
+
+rule all:
+    input:
+        f"{OUTDIR}/final_scaled_genomic.txt"
