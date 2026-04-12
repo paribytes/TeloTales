@@ -1,8 +1,125 @@
 configfile: "config.yaml"
 
+import os
+
 SAMPLES = config["samples"]
 OUTDIR = config["output_dir"]
+BAMDIR = config["input_dir"]
+FTP = config["ftp_base"]
 
+
+# =========================================================
+# FINAL TARGET (what Snakemake builds)
+# =========================================================
 rule all:
     input:
-        f"{OUTDIR}/final_scaled_genomic.txt"
+        f"{OUTDIR}/ScaledGenomicOutput.txt",
+        f"{OUTDIR}/stage2coverage.txt"
+
+
+# =========================================================
+# 1. DOWNLOAD BAM FILES
+# =========================================================
+rule download_bam:
+    output:
+        f"{BAMDIR}/{{sample}}.bam"
+    params:
+        ftp = FTP
+    shell:
+        """
+        mkdir -p {BAMDIR}
+
+        wget {params.ftp}/{wildcards.sample}.bam \
+        -O {output}
+        """
+
+
+# =========================================================
+# 2. RUN QMOTIF
+# =========================================================
+rule run_qmotif:
+    input:
+        bam=f"{BAMDIR}/{{sample}}.bam"
+    output:
+        log="data/logs/{sample}_log.txt",
+        txt="data/qmotif/{sample}_output.txt"
+    shell:
+        """
+        mkdir -p data/logs data/qmotif
+
+        qmotif \
+          -i qmotif.ini \
+          --bam {input.bam} \
+          --log {output.log} \
+          -o {output.txt}
+        """
+
+
+# =========================================================
+# 3. EXTRACT STAGE2 COVERAGE FROM LOGS
+# =========================================================
+rule extract_stage2_coverage:
+    input:
+        log="data/logs/{sample}_log.txt"
+    output:
+        f"{OUTDIR}/stage2/{{sample}}_stage2_coverage.txt"
+    shell:
+        """
+        mkdir -p {OUTDIR}/stage2
+
+        grep 'GENOMIC' {input.log} | \
+        awk '{{split($6, arr, ":"); print arr[1]"\\t"$18}}' | \
+        sed 's/,/\\t/g' > {output}
+        """
+
+
+# =========================================================
+# 4. EXTRACT SCALED GENOMIC READS
+# =========================================================
+rule extract_scaled_genomic:
+    input:
+        expand("data/qmotif/{sample}_output.txt", sample=SAMPLES)
+    output:
+        f"{OUTDIR}/ScaledGenomicOutput.txt"
+    shell:
+        """
+        > {output}
+
+        for file in {input}; do
+
+            if [[ "$file" == *terminal* ]]; then
+                continue
+            fi
+
+            filename=$(grep 'bam="' "$file" | sed 's|.*bam="[^/]\+/||;s|\\..*||')
+            scaled=$(grep '<scaledGenomic' "$file" | sed 's|.*count="\\([0-9]\\+\\)".*|\\1|')
+
+            echo "$filename $scaled" >> {output}
+        done
+        """
+
+
+# =========================================================
+# 5. AGGREGATE CHROMOSOME COVERAGE
+# =========================================================
+rule aggregate_chromosomes:
+    input:
+        files=expand("data/qmotif/{sample}_coverage.txt", sample=SAMPLES),
+        chrfile=config["chromosomes_file"]
+    output:
+        f"{OUTDIR}/stage2coverage.txt"
+    shell:
+        """
+        > {output}
+
+        for file in {input.files}; do
+
+            sed -i '' 's/^/chr/' "$file"
+
+            while read chr; do
+                x=$(grep "^$chr[[:space:]]" "$file" | awk '{{sum+=$2}} END {{print sum}}')
+                echo "$file $chr $x" >> {output}
+            done < {input.chrfile}
+
+        done
+        """
