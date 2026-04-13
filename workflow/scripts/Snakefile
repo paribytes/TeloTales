@@ -81,7 +81,7 @@ rule extract_stage2_coverage:
 # =========================================================
 rule aggregate_chromosomes:
     input:
-        files=expand("data/qmotif/{sample}_coverage.txt", sample=SAMPLES),
+    files=expand("results/stage2/{sample}_stage2_coverage.txt", sample=SAMPLES)
         chrfile="chrnames.txt"
     output:
         f"{OUTDIR}/stage2coverage.txt"
