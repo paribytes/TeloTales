@@ -79,11 +79,10 @@ rule extract_stage2_coverage:
 # =========================================================
 # 4. AGGREGATE CHROMOSOME COVERAGE
 # =========================================================
-
 rule aggregate_chromosomes:
     input:
         files=expand("data/qmotif/{sample}_coverage.txt", sample=SAMPLES),
-        chrfile=config["chromosomes_file"]
+        chrfile="chrnames.txt"
     output:
         f"{OUTDIR}/stage2coverage.txt"
     shell:
@@ -92,7 +91,9 @@ rule aggregate_chromosomes:
 
         for file in {input.files}; do
 
-            sed -i '' 's/^/chr/' "$file"
+            # safer mac/linux compatible version (no sed -i)
+
+            sed 's/^/chr/' "$file" > tmpfile && mv tmpfile "$file"
 
             while read chr; do
                 x=$(grep "^$chr[[:space:]]" "$file" | awk '{{sum+=$2}} END {{print sum}}')
@@ -101,7 +102,6 @@ rule aggregate_chromosomes:
 
         done
         """
-
 # =========================================================
 # 5. EXTRACT SCALED GENOMIC READS
 # =========================================================
