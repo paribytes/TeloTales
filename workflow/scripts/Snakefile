@@ -17,19 +17,19 @@ SAMPLES = sorted({os.path.basename(f).split(".")[0] for f in BAM_FILES})
 # =========================================================
 rule all:
     input:
-        f"{OUTDIR}/ScaledGenomicOutput.txt",
-        f"{OUTDIR}/stage2coverage.txt"
-
+        expand("data/bam/{bam}", bam=BAM_FILES),
+        "results/ScaledGenomicOutput.txt",
+        "results/stage2coverage.txt"
 
 # =========================================================
 # 1. DOWNLOAD BAM FILES
 # =========================================================
 rule download_bam:
     input:
-        "files_list.txt"
+        lambda wildcards: "files_list.txt"
 
     output:
-        expand("data/bam/{file}", file=BAM_FILES)
+        "data/bam/{bam}"
 
     params:
         base_url="https://ftp-trace.ncbi.nih.gov/1000genomes/ftp/phase3/data"
@@ -37,10 +37,7 @@ rule download_bam:
     shell:
         """
         mkdir -p data/bam
-
-        while IFS= read -r file_path; do
-            wget -nc -P data/bam {params.base_url}/$file_path
-        done < {input}
+        wget -nc -P data/bam {params.base_url}/{wildcards.bam}
         """
 
 # =========================================================
