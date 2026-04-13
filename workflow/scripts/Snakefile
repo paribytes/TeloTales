@@ -79,7 +79,7 @@ rule extract_stage2_coverage:
 rule aggregate_chromosomes:
     input:
         files=expand("results/stage2/{sample}_stage2_coverage.txt", sample=SAMPLES),
-        chrfile="workflow/scripts/chrnames.txt"
+        chrfile=config["chromosomes_file"]
 
     output:
         "results/stage2coverage.txt"
