@@ -105,7 +105,6 @@ rule aggregate_chromosomes:
 # =========================================================
 # 5. EXTRACT SCALED GENOMIC READS
 # =========================================================
-
 rule extract_scaled_genomic:
     input:
         expand("data/qmotif/{sample}_output.txt", sample=SAMPLES)
