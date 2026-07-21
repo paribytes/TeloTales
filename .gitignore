@@ -1,0 +1,11 @@
+# User-provided config, not to be committed
+workflow/scripts/qmotif.ini
+
+# Snakemake internals
+.snakemake/
+**/.snakemake/
+
+# Generated pipeline outputs
+workflow/scripts/data/
+data/
+results/stage2/
