@@ -19,6 +19,8 @@ To run this pipeline, you'll need:
 * **Java**: Required to run qmotif
 * **qmotif**: Download and install qmotif ([Documentation here](https://adamajava.readthedocs.io/en/latest/qmotif/qmotif_1_0/))
 
+* A note on qmotif scaling: qmotif normalizes raw motif counts against a BAM file's total read count, scaled to 1 billion reads, so that samples with different sequencing depths can be compared on the same scale. This scaling treats every read equally and doesn't account for factors like unmapped reads or copy number changes (e.g., whole-arm amplifications), since there's no single "correct" way to adjust for those in tumor samples. Despite this simplicity, qmotif's scaled scores have been shown to correlate well with wet-lab telomere length measurements. See the qmotif [documentation](https://adamajava.readthedocs.io/en/latest/qmotif/qmotif_1_2/) for more detail.
+
 <!-- ![qmotif workflow plot](docs/telotales.png) -->
 
 <img src="docs/telotales.png" alt="Telotales plot" width="600"/>
