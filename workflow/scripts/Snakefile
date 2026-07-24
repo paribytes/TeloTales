@@ -56,14 +56,17 @@ rule run_qmotif:
         bai=f"{BAMDIR}/{{sample}}.bam.bai"
     output:
         log="data/logs/{sample}_log.txt",
-        txt="data/qmotif/{sample}_output.txt"
+        txt="data/qmotif/{sample}_output.txt",
+        bam="data/qmotif/{sample}_output.bam"
     shell:
         """
         mkdir -p data/logs data/qmotif
         qmotif -i qmotif.ini \
           --bam {input.bam} \
+          --bai {input.bai} \
           --log {output.log} \
-          -o {output.txt}
+          -o {output.txt} \
+          -o {output.bam}
         """
 
 # =========================================================
@@ -95,11 +98,13 @@ rule aggregate_chromosomes:
         """
         > {output}
         for file in {input.files}; do
-            sed 's/^/chr/' "$file" > tmp && mv tmp "$file"
+            prefixed=$(mktemp)
+            sed 's/^/chr/' "$file" > "$prefixed"
             while read chr; do
-                x=$(grep "^$chr[[:space:]]" "$file" | awk '{{sum+=$2}} END {{print sum}}')
+                x=$(grep "^$chr[[:space:]]" "$prefixed" | awk '{{sum+=$2}} END {{print sum}}' || true)
                 echo "$file $chr $x" >> {output}
             done < {input.chrfile}
+            rm -f "$prefixed"
         done
         """
 
@@ -118,8 +123,8 @@ rule extract_scaled_genomic:
             if [[ "$file" == *terminal* ]]; then
                 continue
             fi
-            filename=$(grep 'bam="' "$file" | sed 's|.*bam="[^/]\+/||;s|\\..*||')
-            scaled=$(grep '<scaledGenomic' "$file" | sed 's|.*count="\\([0-9]\\+\\)".*|\\1|')
+            filename=$(grep 'bam="' "$file" | sed -E 's|.*bam="||;s|.*/||;s|"||;s|\\..*||')
+            scaled=$(grep '<scaledGenomic' "$file" | sed -E 's|.*count="([0-9]+)".*|\\1|')
             echo "$filename $scaled" >> {output}
         done
         """
