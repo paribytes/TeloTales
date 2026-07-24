@@ -19,8 +19,8 @@ Data are accessed directly from the [1000 Genomes Project via NCBI](https://ftp-
 ## Requirements
 To run this pipeline, you'll need:
 
+* **Snakemake**: to run the pipeline
 * **Java**: Required to run qmotif
-* Snakemake: to run the pipeline
 * **qmotif**: Download and install qmotif ([Documentation here](https://adamajava.readthedocs.io/en/latest/qmotif/qmotif_1_0/))
 
 * A note on qmotif scaling: qmotif normalizes raw motif counts against a BAM file's total read count, scaled to 1 billion reads, so that samples with different sequencing depths can be compared on the same scale. This scaling treats every read equally and doesn't account for factors like unmapped reads or copy number changes (e.g., whole-arm amplifications), since there's no single "correct" way to adjust for those in tumor samples. Despite this simplicity, qmotif's scaled scores have been shown to correlate well with wet-lab telomere length measurements. See the qmotif [documentation](https://adamajava.readthedocs.io/en/latest/qmotif/qmotif_1_2/) for more detail.
@@ -42,6 +42,7 @@ Schematic representation of the qmotif-based pipeline used to estimate telomere 
 * **config.yaml**: pipeline configuration: input/output directories, the FTP base URL for downloads, and the path to `chrnames.txt`
 * **files_list.txt**: list of relative BAM/BAI paths for the samples to process
 * **chrnames.txt**: list of chromosome names used for per-chromosome coverage tallying
+* **qmotif.ini**: qmotif configuration file; not included in this repository, must be added by the user (see Requirements/Setup)
 
 Note: This pipeline previously ran as a set of standalone scripts (`download_files.sh`, `runqmotif.py`, `stage2.py`, `realcoverage.sh`, `scaledgenomic.sh`) executed manually in sequence. It has since been converted to a Snakemake pipeline: the Snakefile handles downloading, running qmotif, and aggregating results automatically, with per-sample dependency tracking and the ability to resume after failures.
 
