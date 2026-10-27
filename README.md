@@ -8,6 +8,7 @@ Data are accessed directly from the [1000 Genomes Project via NCBI](https://ftp-
 
 ## Table of Contents
 * [Requirements](#requirements)
+* [How the Pipeline Works](#how-the-pipeline-works)
 * [File Descriptions](#file-descriptions)
 * [Repository Structure](#repository-structure)
 * [Setup](#setup)
@@ -36,6 +37,25 @@ Schematic representation of the qmotif-based pipeline used to estimate telomere 
 * `files_list.txt`: contains relative paths to BAM and corresponding BAI (BAM index) files from the 1000 Genomes Project, one per line (the base URL they're downloaded from is set separately in `config.yaml`)
 * `chrnames.txt`: contains chromosome names for tallying telomeric reads (autosomes only — chr1–chr22; sex chromosomes are not included)
 * `qmotif.ini`: qmotif configuration file used for all analyses in the paper (included in `workflow/scripts/`)
+
+## How the Pipeline Works
+
+For each sample, the Snakefile runs these steps:
+
+1. **Download**: fetches the BAM/BAI listed in `files_list.txt` from the 1000 Genomes FTP.
+2. **qmotif**: scans every read using `qmotif.ini`:
+   - Stage 1: exact match to `TTAGGGTTAGGGTTAGGG` (a fast string prefilter for canonical repeats)
+   - Stage 2: regex `(...GGG){2,}|(CCC...){2,}` (captures variant repeats on both strands)
+   - `revcomp=true`, `window_size=10000`, `cutoff_size=5`
+   - INCLUDES regions: the terminal windows of each chromosome end, defined on hg19 (see `[INCLUDES]` in `qmotif.ini`)
+3. **Per-chromosome tally**: counts stage 2 telomeric reads aligning to the terminal window of each autosome (chr1–22, listed in `chrnames.txt`). These are chromosome-end-associated read counts, not chromosome-specific telomere lengths.
+4. **Aggregation**: combines all samples into `stage2coverage.txt` and `ScaledGenomicOutput.txt`.
+
+### Normalization
+
+scaled count = raw count × 1,000,000,000 / totalReadCount
+
+`totalReadCount` is every record in the input BAM, including unmapped and duplicate-flagged reads, before any qmotif filtering. We verified this on HG00096: qmotif reported 145,063,589 reads, identical to `samtools view -c`.
 
 ## File Descriptions
 * **Snakefile**: defines the full pipeline as a set of Snakemake rules, run per sample
