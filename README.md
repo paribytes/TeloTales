@@ -9,6 +9,7 @@ Data are accessed directly from the [1000 Genomes Project via NCBI](https://ftp-
 ## Table of Contents
 * [Requirements](#requirements)
 * [How the Pipeline Works](#how-the-pipeline-works)
+* [Performance](performance)
 * [File Descriptions](#file-descriptions)
 * [Repository Structure](#repository-structure)
 * [Setup](#setup)
@@ -56,6 +57,21 @@ For each sample, the Snakefile runs these steps:
 scaled count = raw count × 1,000,000,000 / totalReadCount
 
 `totalReadCount` is every record in the input BAM, including unmapped and duplicate-flagged reads, before any qmotif filtering. We verified this on HG00096: qmotif reported 145,063,589 reads, identical to `samtools view -c`.
+
+## Performance
+
+We benchmarked qmotif v1.0 against TelSeq, Telomerecat and TelomereHunter on five 1000 Genomes Phase 3 samples (four GBR, one FIN; low-coverage Illumina BAMs of 14–36 GB aligned to hg19). Each tool ran on one node with up to 8 threads (TelSeq is single-threaded) and a 20 GB memory limit. Times are wall-clock per sample.
+
+| Tool | Mean time (range) | Peak memory |
+|---|---|---|
+| qmotif v1.0 | 1.5 min (0.8–2.5) | 6.7–7.4 GB |
+| Telomerecat | 3.3 min (2.1–4.8) | 1.6–1.7 GB |
+| TelSeq | 11.2 min (6.2–17.1) | ~5 MB |
+| TelomereHunter | 17.0 min (9.5–26.8) | ~76 MB |
+
+qmotif was 2.3–11.6× faster than the other tools on average, at the cost of higher memory use. Peak usage was about 7 GB, well under the 20 GB Java heap limit we set (`-Xmx20g`). All runs completed without errors.
+
+**Disk:** the downloaded BAM dominates storage (14–36 GB per sample here). qmotif's own outputs are small: the XML and extracted-reads BAM are under 0.3 MB each and the index about 1 MB. The 42 MB per-sample log comes from running at `DEBUG` log level; use `--loglevel INFO` to reduce it.
 
 ## File Descriptions
 * **Snakefile**: defines the full pipeline as a set of Snakemake rules, run per sample
