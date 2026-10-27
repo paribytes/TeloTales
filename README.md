@@ -35,14 +35,14 @@ Schematic representation of the qmotif-based pipeline used to estimate telomere 
 **Additional files to prepare:**
 * `files_list.txt`: contains relative paths to BAM and corresponding BAI (BAM index) files from the 1000 Genomes Project, one per line (the base URL they're downloaded from is set separately in `config.yaml`)
 * `chrnames.txt`: contains chromosome names for tallying telomeric reads (autosomes only — chr1–chr22; sex chromosomes are not included)
-* `qmotif.ini`: qmotif configuration file; not included in this repository, must be added by the user
+* `qmotif.ini`: qmotif configuration file used for all analyses in the paper (included in `workflow/scripts/`)
 
 ## File Descriptions
 * **Snakefile**: defines the full pipeline as a set of Snakemake rules, run per sample
 * **config.yaml**: pipeline configuration: input/output directories, the FTP base URL for downloads, and the path to `chrnames.txt`
 * **files_list.txt**: list of relative BAM/BAI paths for the samples to process
 * **chrnames.txt**: list of chromosome names used for per-chromosome coverage tallying
-* **qmotif.ini**: qmotif configuration file; not included in this repository, must be added by the user (see Requirements/Setup)
+* **qmotif.ini**: qmotif configuration file with the motif strings and regex, window size, and the telomeric INCLUDES regions used in the paper (hg19 coordinates)
 
 Note: This pipeline previously ran as a set of standalone scripts (`download_files.sh`, `runqmotif.py`, `stage2.py`, `realcoverage.sh`, `scaledgenomic.sh`) executed manually in sequence. It has since been converted to a Snakemake pipeline: the Snakefile handles downloading, running qmotif, and aggregating results automatically, with per-sample dependency tracking and the ability to resume after failures.
 
@@ -68,7 +68,7 @@ TeloTales/
 │       ├── config.yaml
 │       ├── files_list.txt
 │       ├── chrnames.txt
-│       └── qmotif.ini         (not included — see Requirements)
+│       └── qmotif.ini         
 ├── LICENSE
 └── README.md
 ```
@@ -86,10 +86,10 @@ conda create -n telotales_env -c bioconda -c conda-forge snakemake
 conda activate telotales_env
 ```
 
-3. Add `qmotif.ini`
-Place your `qmotif.ini` configuration file in `workflow/scripts/`.
+3. Check `qmotif.ini`
+The configuration used in the paper is included in `workflow/scripts/`. Edit it only if you want to change parameters or regions (e.g. a different reference build).
 
-4. Confirm `config.yaml`
+5. Confirm `config.yaml`
 `config.yaml` should point to your input/output directories and `chrnames.txt`:
 
 ```
