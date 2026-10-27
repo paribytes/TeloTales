@@ -1,6 +1,3 @@
-# User-provided config, not to be committed
-workflow/scripts/qmotif.ini
-
 # Snakemake internals
 .snakemake/
 **/.snakemake/
